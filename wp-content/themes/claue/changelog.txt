@@ -1,0 +1,240 @@
+
+==v1.3.0== 12/22/2017
+
+* Fix - Fix current product category active state doesn’t highlight
+* Fix - Fix thumbnail outside slide on product detail layout
+* Fix - Fix mini cart count number doesn’t update when use popup 
+* Fix - Fix product has over 3 attributes doesn’t show attribute on checkout page 
+* Fix - Fix product variation have 1 item in stock but user still can adjust quantity to 2
+* Fix - Fix add to cart popup show error message when product out of stock.
+* Fix - Fix currency doesn’t display correct symbol in order.
+* Fix - Fix product video play button doesn’t work on product variable.
+* Fix - Fix product sticky info doesn’t sticky when document ready 
+
+* Tweak - Improve RTL layout
+* Tweak - Improve wishlist button and add “Return & Shipping” support shortcode
+* Tweak - Show popup cart or slide minicart when click on add to cart button on product listing page
+* Tweak - Make product’s gallery doesn’t change when attribute not color
+* Tweak - Update plugin Claue Addons to version 1.0.9
+* Tweak - Update plugin WooCommerce Variation Swatch to version 1.0.3
+
+==v1.2.6== 12/03/2017
+
+* Fix - Fix link “term & condition” open on new tab
+* Fix - Fix bug can’t update via Envato Toolkit  
+
+
+==v1.2.5== 12/01/2017
+
+* Fix    - Fix style of tracking form on mobile
+* Fix    - Fix string can’t translate
+* Fix    - Fix bug quantity input of product variation
+* Fix    - Fix bug can't change the product quantiy when use the up & down key
+* Fix    - Fix bug the sticky add to cart button does not work with Ajax
+* Fix    - Fix search field on Safari
+* Fix    - Fix product thumbnails don’t display when change variation on Chrome v62
+
+* Update - Improve header layout 2 on RTL layout 
+* Update - Improve product listing style on mobile
+* Update - Update language strings
+* Update - Hidden sticky add to cart button when enable catalog mode
+* Update - Add setting color for button on Cart popup
+* Update - Update plugin Variation Swatch to 1.0.2
+* Update - Optimize Woocommerce product categories on the top sidebar
+
+
+
+==v1.2.4== 10/15/2017
+
+* Fix    - Fix style of filter and variation swatch
+* Fix    - Fix minor bug of zoom on quickview modal
+* Fix    - Fix bug flip image thumbnail work with variation swatch
+* Fix    - Fix bug zoom level of colorswatch plugin
+* Fix    - Fix bug aq resize function does not work with Jetpack plugin
+* Fix    - Fix bug can't add product bundle to cart when disable ajax
+* Fix    - Fix bug currency of order on dashboard
+* Fix    - Fix bug add amount of product not correct
+* Update - Add option to display sidebar on Product Details Page
+* Update - Add option to change background for sale, new badge
+* Update - Update language strings and fix some text can't be translate
+* Update - Update header-5 style
+* Update - Update language strings and fix some text can't be translate
+* Update - Update currency to auto detect location
+* Update - Add support custom attribute variation swatch
+* Update - Improve style of WC Vendor
+* Update - Update plugin ClaueAddon to 1.0.8
+* Update - Update plugin Variation Swatch to 1.0.1
+* Update - Update plugin WC product bundle to 1.1.2
+
+
+
+==v1.2.3== 09/02/2017
+
+* Fix   - Fix bug don't display demo store notice
+* Fix   - Fix bug can't adjust the product amount when add product in cart
+* Fix   - Fix bug product bundle can't add to cart in product type is simple
+* Fix   - Fix bug display wrong product variation when add product bundle in mini cart
+* Fix   - Fix message on layout with header layout 5
+* Fix   - Fix bug Ajax add to cart conflict with Product bundle
+* Tweak - Add style for Vendor List
+* Tweak - Update document
+
+
+==v1.2.2== 08/22/2017
+* New   - Sticky add to cart button feature
+* New   - Popup cart
+* Tweak - Improve color swatch plugin
+
+==v1.2.1== 08/15/2017
+* Fix   - Fix bug sale badge doesn't display the dash before number
+* Fix   - Fix fatal error problem of blog shortcode
+* Fix   - Fix theme option color scheme
+* Fix   - Fix bug add product to bundle does not show the Mini cart
+* Tweak - Improve style for WC Marketplace
+
+==v1.2.0== 08/07/2017
+* Fix   - Optimize Ajax Add To cart function in product detail
+* Fix   - Fix bug websafe font loader
+* Fix   - Fix issue add link to slider doesn't work
+* Fix   - Fix product listing responsive
+* Fix   - Fix bug sale badge for product variable
+* Fix   - Fix error mesage when enable product attribute on up-sells, cross-sells product
+* Fix   - Fix single blog post layout without sidebar
+* Tweak - Add option to enable add to cart button on product listing
+* Tweak - Add option to disable quick shop button
+* Tweak - Improve style for WC Vendors
+* Tweak - Improve Apple Pay style
+* Tweak - Update ClaueAddon to 1.0.7
+* Tweak - Add options to control display of icons on header
+* Tweak - Add option to choose the Instagram image size
+* Tweak - Add option to add extra content below add to cart button on product detail page, mini cart, shopping cart, checkout page
+
+==v1.1.7== 07/17/2017
+* Fix   - Improve Apple Pay style
+* Fix   - Fix conflict style with WooCommerce Simple Auction plugin
+* Fix   - Fix image zoom use png image + overlay layer on product listing layout
+* Fix   - Fix image on metro layout
+* Fix   - Fix price of Product bundle display is not good on quickview
+* Tweak - Update document
+* Tweak - Improve product listing layout on small screen smaller 360px
+* Tweak - Style for WC Vendor Pro
+
+
+==v1.1.6== 06/27/2017
+* Fix   - Fix metro layout on tablet portrait
+* Fix   - Fix header layout-3  break on ipad pro screen
+* Fix   - Fix bug setting for product tab in product detail does not work on layout 4
+* Fix   - Fix problem with HTML dom when enable product flip thumbnail
+* Fix   - Fix bug image zoom does not work when enable product swatch
+* Tweak - Make feature to config footer layout
+* Tweak - Added logo support svg format
+* Tweak - Add support new language (Chinese - Taiwan, Portugal-Brazil)
+
+==v1.1.5== 06/20/2017
+* Fix   - Fix bug preloader does not work on Safari
+* Fix   - Fix bug Sale Badge in PHP 7.1.x
+* Fix   - Fix bug Illegal string offset 'name' in content-product.php
+* Fix   - Fix issue when sell product as single order
+* Fix   - Change wc categories menu on mobile to slide
+* Fix   - Fix OpenSwatch can’t save option on PHP 7.1.x
+* Fix   - Fix rounded price
+* Fix   - Fix update plugin WPA WooCommerce Product Bundle
+* Tweak - Update plugin Claue Add-on to 1.0.6
+* Tweak - Update plugin WPA WooCommerce Product Bundle to 1.0.4
+* Tweak - Update plugin OpenSwatch to 2.1.1
+
+
+==v1.1.4== 06/14/2017
+* Fix 	 - Fix wrong breadcrumb on cart, checkout, my account page
+* Fix 	 - Fix  issue with product badge on mobile
+* Fix  	 - Fix slider height on mobile
+* Fix 	 - Fix content of header layout 5 on mobile
+* Fix    - Fix slick slider does not work inside VC tab
+* Fix    - Fix bug can’t disable filter option
+* Fix    - Fix bug can’t override content-product template in child theme
+* Fix    - Fix bug subcategories does not display when setting in each category
+* Fix    - Fix product varation style with plugin AliDropShip
+* Fix    - Fix product layout on mobile
+
+* Tweak  - Make option to on/off column switcher
+* Tweak  - Update fontawesome version
+* Tweak  - Create option to enable/dislabe social share in product detail
+* Tweak  - Add option to select sidebar on single blog post
+* Tweak  - Update document
+* Tweak  - Update Claue Addons plugin to 1.0.5
+* Tweak  - Update Pin Maker plugin to 1.0.4 (fix responsive isue)
+* Tweak  - Update Product Bundle plugin to 1.0.3 (fix issue related to additional tab, related product, calculate price wrong)
+
+==v1.1.3== 05/15/2017
+
+* Fix 	 - Fix bug can't add quantity over 2 when set product with amount in stock less than 10
+* Fix 	 - Fix shipping zone address enable break layout
+* Fix  	 - Fixed breadcrumb of product detail page on boxed layout
+* Fix 	 - Fix bug product shortcode does not work when set filter is “featured products”
+* Fix    - Fix bug does not show product variation on mini cart
+* Tweak  - Make feature product image magnifying
+* Tweak  - Make string on js file can be translate
+* Tweak  - Make option to config nunmber of product related & up-sell display per row
+* Tweak  - Add option to select all portfolio category of portfolio shortcode
+* Tweak  - Add action to improve social network sharing
+* Tweak  - Update document
+* Tweak  - Update Claue Addons plugin to 1.0.4
+* Tweak  - Update Pin Maker  plugin to 1.0.3 
+
+==v1.1.2== 05/03/2017
+* Fix 	 - Fix bug can’t add product bundle to cart & can’t redirect to cart page when enable in WC setting
+* Fix 	 - Fix maintenance mode background image can’t change in theme options
+* Fix  	 - Fix style of top menu and breadcrumb when switch layout to boxed
+* Fix 	 - Fix price of product bundle display wrong in mini cart
+* Fix    - Fix bug product sale countdown did not work
+* Tweak  - Improve Currency switcher compatible with WooCommerce Price Based on Country plugin
+* Tweak  - Add style to compatible with WC vendor plugin
+* Tweak  - Update Claue Addons plugin to 1.0.3
+* Tweak  - Update Product Bundle  plugin to 1.0.2 ( add option to change bundle title and bundle description on product detail config)
+
+==v1.1.1== 04/25/2017
+* Fix 	 - Fix bug currency switcher doesn’t change symbol on minicart
+* Fix 	 - Fix issue header layout 4 generate wrong height on mobile
+* Fix  	 - Fix style of header sticky when change layout to boxed
+* Fix 	 - Fix “continue reading” string can’t translate
+* Fix 	 - Fix minicart style on sidebar
+* Fix 	 - Fix bug can’t remove product from the cart
+* Fix    - Fix bug can’t add product to add when disable ajax on product detail
+* Tweak  - Improve add to cart behavior when select product quantity over quantity of product in stock
+* Tweak  - Add option to add custom js
+* Tweak  - Add class for header icons to easy override with css
+* Tweak  - Update string for translate
+* Tweak  - Add display error message when can’t add product to cart
+* Tweak  - Add parameter in blog shortcode to control thumbnail size
+* Tweak  - Update Claue Addons plugin to 1.0.2
+* Tweak  - Update Pin Maker plugin to 1.0.2
+
+==v1.1.0== 04/18/2017
+* Fix    - Fix click on product detail open on new window not in lightbox
+* Fix    - Fix bug short code products slider working inside Visual Composer tab
+* Fix    - Fix sub-categories title style on Woocommerce 3.0.x
+* Fix    - Fix message box on my account, checkout page
+* Fix    - Fix style of add account on checkout page
+* Fix    - Fix issue with logo on header transparent layout
+* Tweak  - Improve style of filter on sidebar
+* Tweak  - Improve quick view on mobile
+* Tweak  - Add option to config logo width
+* Tweak  - Add option to display sale badge as percent
+* Tweak  - Add option to change menu button icon
+* Tweak  - Update Claue add-on plugin to 1.0.1
+* Tweak  - Update Pin Maker plugin to 1.0.1
+
+==v1.0.2== 04/09/2017
+* Fix    - Fix Ajax add to cart on WooCommerce 3.0.1
+* Tweak  - Update document
+* Tweak  - Optimize code and improve performance
+
+==v1.0.1== 04/07/2017
+* Tweak  - Update theme to compatible with WooCommerce 3.0 
+* Tweak  - Update Product Bundle plugin to 1.0.1 to compatible with WooCommerce 3.0
+* Tweak  - Update OpenSwatch plugin to 2.1.0 to compatible with WooCommerce 3.0
+* Tweak  - Update Visual Composer plugin to 5.1.1
+* Fix    - Fix display product bundle on checkout page.
+
+==v1.0.0== 04/05/2017
+	* initial released 
