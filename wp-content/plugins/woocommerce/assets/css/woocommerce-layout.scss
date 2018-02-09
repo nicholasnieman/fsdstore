@@ -6,21 +6,14 @@
 /**
  * Imports
  */
-@import 'mixins';
-@import 'variables';
+@import "bourbon/bourbon";
+@import "mixins";
+@import "variables";
 
 /**
  * Styling begins
  */
 .woocommerce, .woocommerce-page {
-
-	.woocommerce-message,
-	.woocommerce-error,
-	.woocommerce-info {
-		.button {
-			float: right;
-		}
-	}
 
 	/**
 	 * General layout styles
@@ -303,16 +296,9 @@
 
 		.form-row-first,
 		.form-row-last {
+			float: left;
 			width: 47%;
 			overflow: visible;
-		}
-
-		.form-row-first {
-			float: left;
-
-			/*rtl:raw:
-			float: right;
-			*/
 		}
 
 		.form-row-last {
@@ -341,56 +327,6 @@
 			float: right;
 		}
 	}
-
-	.woocommerce-billing-fields,
-	.woocommerce-shipping-fields {
-		@include clearfix();
-	}
-
-	.woocommerce-terms-and-conditions {
-		margin-bottom: 1.618em;
-		padding: 1.618em;
-	}
-
-	/**
-	 * oEmbeds
-	 */
-	.woocommerce-oembed {
-		position: relative;
-	}
-}
-
-.woocommerce-account {
-	.woocommerce-MyAccount-navigation {
-		float: left;
-		width: 30%;
-	}
-
-	.woocommerce-MyAccount-content {
-		float: right;
-		width: 68%;
-	}
-}
-
-/**
- * Twenty Eleven specific styles
- */
-.woocommerce-page {
-	&.left-sidebar {
-		#content.twentyeleven {
-			width: 58.4%;
-			margin: 0 7.6%;
-			float: right;
-		}
-	}
-
-	&.right-sidebar {
-		#content.twentyeleven {
-			margin: 0 7.6%;
-			width: 58.4%;
-			float: left;
-		}
-	}
 }
 
 /**
@@ -409,6 +345,14 @@
 
 		div.product.hentry.has-post-thumbnail {
 			margin-top: 0;
+		}
+
+		.product {
+			.images {
+				img {
+					margin-bottom: 1em;
+				}
+			}
 		}
 	}
 }
@@ -553,22 +497,6 @@
 			.entry-summary {
 				margin-right: 0;
 				margin-left: 0;
-			}
-		}
-	}
-}
-
-/**
- * RTL styles.
- */
-.rtl {
-	.woocommerce, .woocommerce-page {
-		.col2-set {
-			.col-1 {
-				float: right;
-			}
-			.col-2 {
-				float: left;
 			}
 		}
 	}

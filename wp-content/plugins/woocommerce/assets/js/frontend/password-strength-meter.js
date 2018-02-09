@@ -19,17 +19,16 @@ jQuery( function( $ ) {
 		 * Strength Meter.
 		 */
 		strengthMeter: function() {
-			var wrapper    = $( 'form.register, form.checkout, form.edit-account, form.lost_reset_password' ),
-				submit     = $( 'input[type="submit"]', wrapper ),
-				field      = $( '#reg_password, #account_password, #password_1', wrapper ),
-				strength   = 1,
-				fieldValue = field.val();
+			var wrapper  = $( 'form.register, form.checkout, form.edit-account, form.lost_reset_password' ),
+				submit   = $( 'input[type="submit"]', wrapper ),
+				field    = $( '#reg_password, #account_password, #password_1', wrapper ),
+				strength = 1;
 
 			wc_password_strength_meter.includeMeter( wrapper, field );
 
-			strength = wc_password_strength_meter.checkPasswordStrength( wrapper, field );
+			strength = wc_password_strength_meter.checkPasswordStrength( field );
 
-			if ( fieldValue.length > 0 && strength < wc_password_strength_meter_params.min_password_strength && ! wrapper.is( 'form.checkout' ) ) {
+			if ( strength < wc_password_strength_meter_params.min_password_strength && ! wrapper.is( 'form.checkout' ) ) {
 				submit.attr( 'disabled', 'disabled' ).addClass( 'disabled' );
 			} else {
 				submit.removeAttr( 'disabled', 'disabled' ).removeClass( 'disabled' );
@@ -61,9 +60,9 @@ jQuery( function( $ ) {
 		 *
 		 * @return {Int}
 		 */
-		checkPasswordStrength: function( wrapper, field ) {
-			var meter     = wrapper.find( '.woocommerce-password-strength' );
-			var hint      = wrapper.find( '.woocommerce-password-hint' );
+		checkPasswordStrength: function( field ) {
+			var meter     = $( '.woocommerce-password-strength' );
+			var hint      = $( '.woocommerce-password-hint' );
 			var hint_html = '<small class="woocommerce-password-hint">' + wc_password_strength_meter_params.i18n_password_hint + '</small>';
 			var strength  = wp.passwordStrength.meter( field.val(), wp.passwordStrength.userInputBlacklist() );
 			var error     = '';

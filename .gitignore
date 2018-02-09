@@ -3,6 +3,7 @@ wp-content/uploads/*
 uploads
 Email
 email
+wp-content/plugins/fsd_design_builder/*
 robots.txt
 
 .DS_Store
@@ -25,3 +26,5 @@ materials/
 *.zip
 RSA
 RSAPrivate.ppk
+wp-content/themes/frameshowerdoors/cache/*
+store/

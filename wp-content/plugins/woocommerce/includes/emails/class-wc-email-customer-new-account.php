@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-if ( ! class_exists( 'WC_Email_Customer_New_Account', false ) ) :
+if ( ! class_exists( 'WC_Email_Customer_New_Account' ) ) :
 
 /**
  * Customer New Account.
@@ -50,36 +50,21 @@ class WC_Email_Customer_New_Account extends WC_Email {
 	/**
 	 * Constructor.
 	 */
-	public function __construct() {
+	function __construct() {
+
 		$this->id             = 'customer_new_account';
 		$this->customer_email = true;
 		$this->title          = __( 'New account', 'woocommerce' );
 		$this->description    = __( 'Customer "new account" emails are sent to the customer when a customer signs up via checkout or account pages.', 'woocommerce' );
+
 		$this->template_html  = 'emails/customer-new-account.php';
 		$this->template_plain = 'emails/plain/customer-new-account.php';
 
-		// Call parent constructor
+		$this->subject        = __( 'Your account on {site_title}', 'woocommerce');
+		$this->heading        = __( 'Welcome to {site_title}', 'woocommerce');
+
+		// Call parent constuctor
 		parent::__construct();
-	}
-
-	/**
-	 * Get email subject.
-	 *
-	 * @since  3.1.0
-	 * @return string
-	 */
-	public function get_default_subject() {
-		return __( 'Your account on {site_title}', 'woocommerce' );
-	}
-
-	/**
-	 * Get email heading.
-	 *
-	 * @since  3.1.0
-	 * @return string
-	 */
-	public function get_default_heading() {
-		return __( 'Welcome to {site_title}', 'woocommerce' );
 	}
 
 	/**
@@ -89,8 +74,7 @@ class WC_Email_Customer_New_Account extends WC_Email {
 	 * @param string $user_pass
 	 * @param bool $password_generated
 	 */
-	public function trigger( $user_id, $user_pass = '', $password_generated = false ) {
-		$this->setup_locale();
+	function trigger( $user_id, $user_pass = '', $password_generated = false ) {
 
 		if ( $user_id ) {
 			$this->object             = new WP_User( $user_id );
@@ -102,11 +86,11 @@ class WC_Email_Customer_New_Account extends WC_Email {
 			$this->password_generated = $password_generated;
 		}
 
-		if ( $this->is_enabled() && $this->get_recipient() ) {
-			$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
+		if ( ! $this->is_enabled() || ! $this->get_recipient() ) {
+			return;
 		}
 
-		$this->restore_locale();
+		$this->send( $this->get_recipient(), $this->get_subject(), $this->get_content(), $this->get_headers(), $this->get_attachments() );
 	}
 
 	/**
@@ -115,7 +99,7 @@ class WC_Email_Customer_New_Account extends WC_Email {
 	 * @access public
 	 * @return string
 	 */
-	public function get_content_html() {
+	function get_content_html() {
 		return wc_get_template_html( $this->template_html, array(
 			'email_heading'      => $this->get_heading(),
 			'user_login'         => $this->user_login,
@@ -124,7 +108,7 @@ class WC_Email_Customer_New_Account extends WC_Email {
 			'password_generated' => $this->password_generated,
 			'sent_to_admin'      => false,
 			'plain_text'         => false,
-			'email'				 => $this,
+			'email'				 => $this
 		) );
 	}
 
@@ -134,7 +118,7 @@ class WC_Email_Customer_New_Account extends WC_Email {
 	 * @access public
 	 * @return string
 	 */
-	public function get_content_plain() {
+	function get_content_plain() {
 		return wc_get_template_html( $this->template_plain, array(
 			'email_heading'      => $this->get_heading(),
 			'user_login'         => $this->user_login,
@@ -143,7 +127,7 @@ class WC_Email_Customer_New_Account extends WC_Email {
 			'password_generated' => $this->password_generated,
 			'sent_to_admin'      => false,
 			'plain_text'         => true,
-			'email'			     => $this,
+			'email'			     => $this
 		) );
 	}
 }

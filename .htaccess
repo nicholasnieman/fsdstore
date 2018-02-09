@@ -1,3 +1,4 @@
+RewriteOptions inherit
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
@@ -10,3 +11,139 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+Redirect 301 /glass.php /get-started/
+Redirect 301 /getstarted.php /get-started/
+Redirect 301 /getstarted /get-started/
+Redirect 301 /towel-bars /
+Redirect 301 /seals /
+Redirect 301 /handles /
+Redirect 301 /frameless-sliding-shower-door-hydroslide-3 /
+Redirect 301 /showrooms.html/port-st-lucie,-fl /
+Redirect 301 /diy-center/design-tips.html /
+Redirect 301 /frameless-sliding-shower-door-hydroslide-1 /
+Redirect 301 /contact.html /
+Redirect 301 /gallery.html /
+Redirect 301 /magento/  /
+Redirect 301 /hydroslide-180-degree-standard-sliding-door-kit /
+Redirect 301 /showrooms.html/pompano-beach,-fl /
+Redirect 301 /dfi-landing-page.html /
+Redirect 301 /clamps /
+Redirect 301 /handle-towel-bar-combo /
+Redirect 301 /bathtub-shower-door-hydroslide-5 /
+Redirect 301 /round-mitered-corner-pull-handle-towel-bar-combo /
+Redirect 301 /gallery/glass-options.html /
+Redirect 301 heavy-duty-top-bottom-pivot-hinge /
+Redirect 301 /magento/smooth-acrylic-pull-handle-towel-bar-combo-with-ring /
+Redirect 301 /u-channel-4898 /
+Redirect 301 /3-8-bulb-seal /
+Redirect 301 /rounded-heavy-duty-top-bottom-pivot-hinge /
+Redirect 301 /california/index.html /
+Redirect 301 /showrooms.html/delray-beach,-fl /
+Redirect 301 /frameless-shower-door-inline-10 /
+Redirect 301 /frameless-sliding-shower-doors-standard /
+Redirect 301 /shower-doors.html?subcategory=14 /
+Redirect 301 /hinges /
+Redirect 301 /seals?limit=45 /
+Redirect 301 /bathtub-shower-door-hydroslide-1 /
+Redirect 301 /colonial-pull-handle-towel-bar-combo /
+Redirect 301 /hinges?dir=asc&limit=90&order=towelbar_size /
+Redirect 301 /services/residential-glass-walls.html /
+Redirect 301 /serenity-series-sliding-door-standard-180-kit /
+Redirect 301 /diy-center/measuring-guide.html /
+Redirect 301 /frameless-shower-door-neo-angle-16 /
+Redirect 301 /dfi-landing-page?ISRC=FramelessShowerDoor:homepage:topNav:aboutdfi /
+Redirect 301 /dfi-landing-page?ISRC=FramelessShowerDoor:homepage:learnmoreaboutdfi /
+Redirect 301 /hinges?limit=30 /
+Redirect 301 /hinges?limit=all /
+Redirect 301 /frameless-sliding-shower-door-serenity-3 /
+Redirect 301 /frameless-shower-door-neo-angle-20 /
+Redirect 301 /diy-center.html /
+Redirect 301 /square-pull-handle-towel-bar-combo /
+Redirect 301 /frameless-sliding-shower-door-cottage-1 /
+Redirect 301 /services/installation.html /
+Redirect 301 /store.html /
+Redirect 301 /diy-center/faq.html /
+Redirect 301 /frameless-sliding-shower-doors-cottage /
+Redirect 301 /shower-doors.html /
+Redirect 301 /yearendsale/promo.html /
+Redirect 301 /rounded-heavy-duty-ez-adjust-header-compatible-pivot-hinge /
+Redirect 301 /terms-and-conditions.html /
+Redirect 301 /il.html /
+Redirect 301 /frameless-sliding-shower-door-serenity-1 /
+Redirect 301 /showrooms.html/doral,-fl /
+Redirect 301 /frameless-shower-door-inline-layout-22-new /
+Redirect 301 /videos/pivot-hinge-header-enclosure /
+Redirect 301 /serenity1/  /
+Redirect 301 /complete-install-kit /
+Redirect 301 /glassshowerdoors/az.html /
+
+# ------------------------------------------------------------------------------
+# | Compression                                                                |
+# ------------------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+
+    # Force compression for mangled headers.
+    # http://developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # Compress all output labeled with one of the following MIME-types
+    # (for Apache versions below 2.3.7, you don't need to enable `mod_filter`
+    #  and can remove the `<IfModule mod_filter.c>` and `</IfModule>` lines
+    #  as `AddOutputFilterByType` is still in the core directives).
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/javascript \
+                                      application/json \
+                                      application/ld+json \
+                                      application/rss+xml \
+                                      application/vnd.ms-fontobject \
+                                      application/x-font-ttf \
+                                      application/x-web-app-manifest+json \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      font/opentype \
+                                      image/svg+xml \
+                                      image/x-icon \
+                                      text/css \
+                                      text/html \
+                                      text/plain \
+                                      text/x-component \
+                                      text/xml
+    </IfModule>
+
+</IfModule>
+
+<files *.js>
+SetOutputFilter DEFLATE
+</files>
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType application/x-javascript "access plus 2 month"
+ExpiresByType text/javascript "access plus 2 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/javascript "access plus 2 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 2 days"
+</IfModule>
+## EXPIRES CACHING ##
+
