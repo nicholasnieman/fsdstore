@@ -80,57 +80,25 @@
 				
 					<div class="container ">
 						<div class="row">
-						<div class="col-sm-6 col-md-col-6">
-					
-						  	<a  href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name') ?>">
-						  		<img src="<?php echo get_template_directory_uri(); ?>/images/FramelessShowerDoors_logo.gif" />
-						  	</a><p class="slogan">America's only direct from the manufacturer frameless shower door company.</p>
-						  
-						</div>
-						<div class="col-sm-6 col-md-col-6">
+							<div class="col-sm-6 col-md-col-6">
 						
-						 
-						     <ul class="social_icons">
-						        <li><a href="https://www.linkedin.com/company/frameless-shower-doors"><i class="fa fa-linkedin"></i></a></li>
-						        <li><a href="https://plus.google.com/105012829330780115683"><i class="fa fa-google-plus"></i></a></li>
-						        <li><a href="http://www.youtube.com/user/FramelessShowerDoors"><i class="fa fa-youtube"></i></a></li>
-						        <li><a href="https://twitter.com/FramelesShower"><i class="fa fa-twitter"></i></a></li>
-						        <li><a href="http://www.facebook.com/theoriginalframelessshowerdoors"><i class="fa fa-facebook"></i></a></li>
-						      </ul>
-						  
-						</div>
-						</div></div>
-                        <div class="main_header inner-header-search-icon" style="background:#157c81;">
-					 	<div class="col-md-col-11" >
-							
-							<div class="container ">
-							    <div class="custom_menu">
-							     	<div class="menu"> <a href="#" id="menu-toggle"><span>menu</span></a>
-							     	  	
-							     	  	<?php if( function_exists( 'has_nav_menu' ) && has_nav_menu( 'primary' ) ) {
-							     	  		wp_nav_menu(array( 'sort_column' => 'menu_order', 'container_class' => 'main-menu', 'container_id' => 'header-main-menu', 'menu_id' => 'main-menu', 'theme_location'  => 'primary') ); ?>
-							     	  		<!-- <li><a id="btn-search" href="javascript:void(0);"><i class="fa fa-search"></i></a></li> -->
-							     	  	<?php } else { ?>
-							     	  	
-							     	  	<div id="header-main-menu" class="main-menu">
-							     	  		<ul id="menu_list" class="menu">
-							     	  			<?php wp_list_pages('title_li=&depth=0'); ?>
-							     	  			
-							     	  		</ul>
-
-							     	  	</div>
-							     	  	<?php } ?>
-							     	</div>
-							    </div>
-							    <div id="search-form">
-							    	<a class="close b-close">Close</a>
-									<?php get_search_form(); ?>
-
-								</div>
-					
-						
-					  	</div></div>
+							  	<a  href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name') ?>">
+							  		<img src="<?php echo get_template_directory_uri(); ?>/images/FramelessShowerDoors_logo.gif" />
+							  	</a><p class="slogan">America's only direct from the manufacturer frameless shower door company.</p>
+							  
 							</div>
-					  	
+							<div class="col-sm-6 col-md-col-6">
+							
+							 
+							     <ul class="social_icons">
+							        <li><a href="https://www.linkedin.com/company/frameless-shower-doors"><i class="fa fa-linkedin"></i></a></li>
+							        <li><a href="https://plus.google.com/105012829330780115683"><i class="fa fa-google-plus"></i></a></li>
+							        <li><a href="http://www.youtube.com/user/FramelessShowerDoors"><i class="fa fa-youtube"></i></a></li>
+							        <li><a href="https://twitter.com/FramelesShower"><i class="fa fa-twitter"></i></a></li>
+							        <li><a href="http://www.facebook.com/theoriginalframelessshowerdoors"><i class="fa fa-facebook"></i></a></li>
+							      </ul>
+							</div>
+						</div>
+					</div>  	
 				</div>
 		
