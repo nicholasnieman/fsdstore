@@ -25,6 +25,7 @@ class WC_Meta_Box_Product_Images {
 	 * @param WP_Post $post
 	 */
 	public static function output( $post ) {
+		wp_nonce_field( 'woocommerce_save_data', 'woocommerce_meta_nonce' );
 		?>
 		<div id="product_images_container">
 			<ul class="product_images">
@@ -32,15 +33,15 @@ class WC_Meta_Box_Product_Images {
 					if ( metadata_exists( 'post', $post->ID, '_product_image_gallery' ) ) {
 						$product_image_gallery = get_post_meta( $post->ID, '_product_image_gallery', true );
 					} else {
-						// Backwards compat
+						// Backwards compatibility.
 						$attachment_ids = get_posts( 'post_parent=' . $post->ID . '&numberposts=-1&post_type=attachment&orderby=menu_order&order=ASC&post_mime_type=image&fields=ids&meta_key=_woocommerce_exclude_image&meta_value=0' );
 						$attachment_ids = array_diff( $attachment_ids, array( get_post_thumbnail_id() ) );
 						$product_image_gallery = implode( ',', $attachment_ids );
 					}
 
-					$attachments = array_filter( explode( ',', $product_image_gallery ) );
-
-					$update_meta = false;
+					$attachments         = array_filter( explode( ',', $product_image_gallery ) );
+					$update_meta         = false;
+					$updated_gallery_ids = array();
 
 					if ( ! empty( $attachments ) ) {
 						foreach ( $attachments as $attachment_id ) {
@@ -49,7 +50,6 @@ class WC_Meta_Box_Product_Images {
 							// if attachment is empty skip
 							if ( empty( $attachment ) ) {
 								$update_meta = true;
-
 								continue;
 							}
 
@@ -76,7 +76,7 @@ class WC_Meta_Box_Product_Images {
 
 		</div>
 		<p class="add_product_images hide-if-no-js">
-			<a href="#" data-choose="<?php esc_attr_e( 'Add Images to Product Gallery', 'woocommerce' ); ?>" data-update="<?php esc_attr_e( 'Add to gallery', 'woocommerce' ); ?>" data-delete="<?php esc_attr_e( 'Delete image', 'woocommerce' ); ?>" data-text="<?php esc_attr_e( 'Delete', 'woocommerce' ); ?>"><?php _e( 'Add product gallery images', 'woocommerce' ); ?></a>
+			<a href="#" data-choose="<?php esc_attr_e( 'Add images to product gallery', 'woocommerce' ); ?>" data-update="<?php esc_attr_e( 'Add to gallery', 'woocommerce' ); ?>" data-delete="<?php esc_attr_e( 'Delete image', 'woocommerce' ); ?>" data-text="<?php esc_attr_e( 'Delete', 'woocommerce' ); ?>"><?php _e( 'Add product gallery images', 'woocommerce' ); ?></a>
 		</p>
 		<?php
 	}
