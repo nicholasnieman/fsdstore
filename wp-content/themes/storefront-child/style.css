@@ -12,3 +12,49 @@ Tags:        NA
 Text Domain: fsd-store-child-theme
 
 */
+
+.site-header {
+	background: linear-gradient(#04b7f7, #005c7d);
+	color: #fff;
+}
+#site-heading {
+	color: #fff;
+}
+#branding-container {
+	width: 66.66%;
+	float: left;
+}
+.main-navigation ul li a {
+	color: #fff;
+	font-family: 'Vollkorn SC', serif;
+	margin: 00;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1em;
+}
+.main-navigation ul li a:hover {
+	color: #00d3e0;
+}
+ul.menu li a {
+	color: #fff;
+	font-size: 1em;
+	opacity: 1;
+}
+ul.menu li a:hover {
+	color: #00d3e0;
+}
+.site-header ul.menu li.current-menu-item > a {
+	color: #fff;
+}
+.site-header ul.menu li.current-menu-item > a:hover {
+	color: #00d3e0;
+}
+.pswp__bg{
+	background: #fff;
+}
+h1 {
+	font-family: 'Vollkorn SC', serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 2.5em;
+}

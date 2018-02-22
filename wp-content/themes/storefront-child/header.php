@@ -14,6 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
+
 
 <?php wp_head(); ?>
 </head>
@@ -27,7 +29,11 @@
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
-
+		<div id="branding-container">
+			<a href="https://www.framelessshowerdoors.com" target="_blank"><img id="logo" src="<?php echo site_url(); ?>/wp-content/uploads/2018/02/FSDlogo.png" alt=""></a>
+			<h1 id="site-heading">Online Parts Warehouse</h1>
+		</div>
+			
 			<?php
 			/**
 			 * Functions hooked into storefront_header action
