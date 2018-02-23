@@ -12,7 +12,9 @@ Tags:        NA
 Text Domain: fsd-store-child-theme
 
 */
-
+.woocommerce-ordering {
+	display: none;
+	}
 .site-header {
 	background: linear-gradient(#04b7f7, #005c7d);
 	color: #fff;
