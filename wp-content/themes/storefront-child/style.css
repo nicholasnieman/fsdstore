@@ -12,6 +12,21 @@ Tags:        NA
 Text Domain: fsd-store-child-theme
 
 */
+body, input {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+/*input, select, button, a.button {
+	border-radius: 15px !important;
+}*/
+h1 {
+	font-family: 'Vollkorn SC', serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 2.5em;
+}
+input[type=search] {
+	background-color: #fff;
+}
 .price {
 	display: none;
 }
@@ -57,9 +72,17 @@ ul.menu li a:hover {
 .pswp__bg{
 	background: #fff;
 }
-h1 {
+mark.count {
+	display: none;
+}
+ul.products li.product.product-category .woocommerce-loop-category__title,
+ul.products li.product.product-category h2,
+ul.products li.product .woocommerce-loop-product__title,
+ul.products li.product h2,
+ul.products li.product h3 {
 	font-family: 'Vollkorn SC', serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 2.5em;
+	font-size: 1.2em;
+	font-weight: bold;
 }
