@@ -31,8 +31,8 @@
 		<div class="col-full">
 		<div id="branding-container">
 			<a href="https://www.framelessshowerdoors.com" target="_blank"><img id="logo" src="<?php echo site_url(); ?>/wp-content/uploads/2018/02/FSDlogo.png" alt=""></a>
-			<h1 id="site-heading">Online Parts Warehouse</h1>
-		</div>
+<!-- 			<h1 id="site-heading">Online Parts Warehouse</h1>
+ -->		</div>
 			
 			<?php
 			/**
