@@ -15,9 +15,6 @@ Text Domain: fsd-store-child-theme
 body, input {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-/*input, select, button, a.button {
-	border-radius: 15px !important;
-}*/
 h1 {
 	font-family: 'Vollkorn SC', serif;
 	text-transform: uppercase;
@@ -27,15 +24,12 @@ h1 {
 input[type=search] {
 	background-color: #fff;
 }
-.price {
-	display: none;
-}
-.woocommerce-ordering {
-	display: none;
-}
 .site-header {
 	background: linear-gradient(#04b7f7, #005c7d);
 	color: #fff;
+}
+.woocommerce-breadcrumb {
+	margin-bottom: 1em;
 }
 #site-heading {
 	color: #fff;
@@ -52,28 +46,20 @@ input[type=search] {
 	letter-spacing: 1px;
 	font-size: 1em;
 }
-.main-navigation ul li a:hover {
-	color: #00d3e0;
-}
 ul.menu li a {
 	color: #fff;
 	font-size: 1em;
 	opacity: 1;
 }
-ul.menu li a:hover {
-	color: #00d3e0;
-}
 .site-header ul.menu li.current-menu-item > a {
 	color: #fff;
 }
-.site-header ul.menu li.current-menu-item > a:hover {
-	color: #00d3e0;
+.main-navigation ul li a:hover,
+ul.menu li a:hover {
+	color: #2faaaf;
 }
 .pswp__bg{
 	background: #fff;
-}
-mark.count {
-	display: none;
 }
 ul.products li.product.product-category .woocommerce-loop-category__title,
 ul.products li.product.product-category h2,
@@ -85,4 +71,47 @@ ul.products li.product h3 {
 	letter-spacing: 1px;
 	font-size: 1.2em;
 	font-weight: bold;
+}
+.widget_product_categories ul li {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+.widget_product_categories ul li:before {
+	content: "";
+	display: none;
+}
+.widget-area .widget a:not(.button) {
+	text-decoration: none;
+	display: block;
+	background-color: #d4d3d6;
+	color: #868484;
+	padding: 1em 0 1em 10px;
+	font-family: 'Vollkorn SC', serif;
+	text-transform: uppercase;
+	font-size: 1em;
+	margin-bottom: 2px;
+}
+.widget-area .widget a:hover {
+	background-color: #b2b2b2;
+    color: #fff;
+}
+ul.children {
+	margin-top: 0;
+}
+.widget_product_categories ul .children {
+	width: 90%;
+	margin-left: 10%;
+	margin-top: 0;
+}
+.current-cat {
+
+}
+li.current-cat:only-child {
+
+}
+.woocommerce-ordering,
+.price,
+mark.count,
+span.gamma {
+	display: none;
 }
