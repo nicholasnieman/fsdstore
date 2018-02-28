@@ -31,6 +31,9 @@ input[type=search] {
 .woocommerce-breadcrumb {
 	margin-bottom: 1em;
 }
+.widget_product_categories {
+	margin-top: 4em;
+}
 #site-heading {
 	color: #fff;
 }
@@ -92,8 +95,8 @@ ul.products li.product h3 {
 	margin-bottom: 2px;
 }
 .widget-area .widget a:hover {
-	background-color: #b2b2b2;
-    color: #fff;
+	background-color: #b2b2b2 !important;
+    color: #fff !important;
 }
 ul.children {
 	margin-top: 0;
@@ -103,15 +106,19 @@ ul.children {
 	margin-left: 10%;
 	margin-top: 0;
 }
-.current-cat {
-
-}
-li.current-cat:only-child {
-
-}
 .woocommerce-ordering,
 .price,
 mark.count,
 span.gamma {
 	display: none;
+}
+li.product-category a img {
+	height: 175px;
+}
+li.product {
+	min-height: 250px;
+}
+.widget-area .widget .current-cat a:first-child {
+	background-color: #005c7d;
+	color: #ffffff;
 }
