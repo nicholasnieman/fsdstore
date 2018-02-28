@@ -112,12 +112,12 @@ mark.count,
 span.gamma {
 	display: none;
 }
-li.product-category a img {
+/*li.product-category a img {
 	height: 175px;
 }
-li.product {
+*//*li.product {
 	min-height: 250px;
-}
+}*/
 .widget-area .widget .current-cat a:first-child {
 	background-color: #005c7d;
 	color: #ffffff;
