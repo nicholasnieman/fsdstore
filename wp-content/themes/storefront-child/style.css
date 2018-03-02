@@ -10,8 +10,8 @@ License:     NA
 License URI: NA 
 Tags:        NA 
 Text Domain: fsd-store-child-theme
-
 */
+
 body, input {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
@@ -24,8 +24,19 @@ h1 {
 input[type=search] {
 	background-color: #fff;
 }
+.banner-container {
+	background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat right;
+	padding: 8% 0;
+}
+.title-text {
+	width: 75%;
+}
+.woocommerce-products-header__title {
+	margin: 0 0 0 5%;
+	font-weight: bold;
+}
 .site-header {
-	background: linear-gradient(#04b7f7, #005c7d);
+	background: linear-gradient(#21adb6, #0d5458);
 	color: #fff;
 }
 .woocommerce-breadcrumb {
@@ -59,9 +70,9 @@ ul.menu li a {
 }
 .main-navigation ul li a:hover,
 ul.menu li a:hover {
-	color: #2faaaf;
+	color: #acabad;
 }
-.pswp__bg{
+.pswp__bg {
 	background: #fff;
 }
 ul.products li.product.product-category .woocommerce-loop-category__title,
@@ -112,13 +123,23 @@ mark.count,
 span.gamma {
 	display: none;
 }
-/*li.product-category a img {
-	height: 175px;
-}
-*//*li.product {
-	min-height: 250px;
-}*/
 .widget-area .widget .current-cat a:first-child {
-	background-color: #005c7d;
+	background-color: #0d5458;
 	color: #ffffff;
+}
+
+@media only screen and (max-width: 950px) {
+	.woocommerce-products-header__title {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (max-width: 760px) {
+	.banner-container {
+		text-align: center;
+		background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat left;
+	}
+	.title-text {
+		width: 100%;
+	}
 }
