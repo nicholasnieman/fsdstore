@@ -142,4 +142,7 @@ span.gamma {
 	.title-text {
 		width: 100%;
 	}
+	.woocommerce-products-header__title {
+		margin: 0 0 0 0;
+	}
 }
