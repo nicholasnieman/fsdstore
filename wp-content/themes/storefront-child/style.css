@@ -24,6 +24,13 @@ h1 {
 input[type=search] {
 	background-color: #fff;
 }
+img#logo:hover,
+.product:hover img {
+	transform: scale(1.1);
+}
+.product:hover img {
+		opacity: .8;
+}
 .banner-container {
 	background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat right;
 	padding: 8% 0;
@@ -71,6 +78,9 @@ ul.menu li a {
 .main-navigation ul li a:hover,
 ul.menu li a:hover {
 	color: #acabad;
+}
+.main-navigation ul li a:hover {
+	transform: scale(1.1);
 }
 .pswp__bg {
 	background: #fff;
@@ -134,7 +144,7 @@ span.gamma {
 	}
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 768px) {
 	.banner-container {
 		text-align: center;
 		background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat left;
@@ -145,4 +155,19 @@ span.gamma {
 	.woocommerce-products-header__title {
 		margin: 0 0 0 0;
 	}
+		.main-navigation ul li a:hover {
+		transform: none;
+	}
 }
+
+#contact-container {
+	margin-top: 3em;
+	position: relative;
+}
+#contact-info {
+	margin: 0 auto;
+	position: relative;
+	background: black;
+	width: 50%;
+}
+
