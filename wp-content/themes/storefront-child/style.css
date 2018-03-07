@@ -144,7 +144,9 @@ span.gamma {
 	font-size: 1.2em;
 	color: #000;
 }
-
+.break {
+	display: inline-block;
+}
 .contact:nth-child(2){
 	margin-top: 20px;
 }
@@ -155,7 +157,7 @@ span.gamma {
 	margin: 0 auto;
 	width: 80%;
 	padding: 5%;
-	border: 1px solid #ccc;
+	background: #eeeeee;
 }
 #contact-heading {
 	font-family: 'Vollkorn SC', serif;
@@ -167,9 +169,7 @@ span.gamma {
 #contact-heading-container {
 	text-align: center;
 }
-.break {
-	display: inline-block;
-}
+
 @media only screen and (max-width: 950px) {
 	.woocommerce-products-header__title {
 		font-size: 2em;
@@ -187,7 +187,7 @@ span.gamma {
 	.woocommerce-products-header__title {
 		margin: 0 0 0 0;
 	}
-		.main-navigation ul li a:hover {
+	.main-navigation ul li a:hover {
 		transform: none;
 	}
 	#contact-info {
