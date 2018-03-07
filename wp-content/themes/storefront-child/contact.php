@@ -29,12 +29,19 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 do_action( 'woocommerce_before_main_content' );
-
 ?>
+
 <div id="contact-container">
 	<div id="contact-info">
-		<h2>The Original Frameless Shower Doors</h2>
-		<i class="fab fa-accessible-icon"></i>
+		<div id="contact-heading-container">
+			<h2 id="contact-heading"><span class="break">The Original Frameless</span> <span class="break">Shower Doors</span></h2>
+		</div>
+		<ul>
+			<li class="contact"><strong>Headquarters</strong> <br>
+			3591 NW 120th Avenue <br> Coral Springs, FL 33065</li>
+			<li class="contact"><i class="fas fa-phone-square"></i> <a href="tel:+9547572114">(855) 372-6537</a></li>
+			<li class="contact"><i class="fas fa-envelope-square"></i> <a href="mailto:contact@fsdae.com">contact@fsdae.com</a></li>
+		</ul>
 	</div>
 </div>
 

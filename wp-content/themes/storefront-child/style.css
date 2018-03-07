@@ -28,8 +28,11 @@ img#logo:hover,
 .product:hover img {
 	transform: scale(1.1);
 }
+ul {
+	list-style-type: none;
+}
 .product:hover img {
-		opacity: .8;
+	opacity: .8;
 }
 .banner-container {
 	background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat right;
@@ -62,7 +65,7 @@ img#logo:hover,
 .main-navigation ul li a {
 	color: #fff;
 	font-family: 'Vollkorn SC', serif;
-	margin: 00;
+	margin: 0 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1em;
@@ -137,7 +140,36 @@ span.gamma {
 	background-color: #0d5458;
 	color: #ffffff;
 }
+.contact {
+	font-size: 1.2em;
+	color: #000;
+}
 
+.contact:nth-child(2){
+	margin-top: 20px;
+}
+#contact-container {
+	margin-top: 3.5em;
+}
+#contact-info {
+	margin: 0 auto;
+	width: 80%;
+	padding: 5%;
+	border: 1px solid #ccc;
+}
+#contact-heading {
+	font-family: 'Vollkorn SC', serif;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #0d5458;
+}
+#contact-heading-container {
+	text-align: center;
+}
+.break {
+	display: inline-block;
+}
 @media only screen and (max-width: 950px) {
 	.woocommerce-products-header__title {
 		font-size: 2em;
@@ -158,13 +190,15 @@ span.gamma {
 		.main-navigation ul li a:hover {
 		transform: none;
 	}
+	#contact-info {
+		width: 100%;
+	}
 }
-
-#contact-container {
-	margin-top: 3em;
+@media only screen and (max-width: 550px) {
+	#contact-heading {
+		font-size: 1em;
+	}
+	.contact {
+		font-size: 1em;
+	}
 }
-#contact-info {
-	margin: 0 auto;
-	width: 66.66%;
-}
-
