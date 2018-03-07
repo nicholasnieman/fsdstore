@@ -33,7 +33,8 @@ do_action( 'woocommerce_before_main_content' );
 ?>
 <div id="contact-container">
 	<div id="contact-info">
-		<h1>contact</h1>
+		<h2>The Original Frameless Shower Doors</h2>
+		<i class="fab fa-accessible-icon"></i>
 	</div>
 </div>
 

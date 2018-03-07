@@ -16,6 +16,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Vollkorn+SC" rel="stylesheet">
 <script src="/wp-content/themes/storefront-child/functions.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
 
 <?php wp_head(); ?>
@@ -31,7 +32,7 @@
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
 		<div id="branding-container">
-			<a href="https://www.framelessshowerdoors.com" target="_blank"><img id="logo" src="<?php echo site_url(); ?>/wp-content/uploads/2018/02/FSDlogo.png" alt=""></a>
+			<a href="https://www.framelessshowerdoors.com" target="_blank"><img id="logo" src="/wp-content/uploads/2018/02/FSDlogo.png" alt=""></a>
 		</div>
 			
 			<?php

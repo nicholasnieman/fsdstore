@@ -162,12 +162,9 @@ span.gamma {
 
 #contact-container {
 	margin-top: 3em;
-	position: relative;
 }
 #contact-info {
 	margin: 0 auto;
-	position: relative;
-	background: black;
-	width: 50%;
+	width: 66.66%;
 }
 
