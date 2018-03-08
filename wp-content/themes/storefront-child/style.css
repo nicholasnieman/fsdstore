@@ -31,12 +31,16 @@ img#logo:hover,
 ul {
 	list-style-type: none;
 }
+header#masthead.site-header {
+	margin: 0 0 1.5em 0;
+	padding: 1.5em 0 0 0;
+}
 .product:hover img {
 	opacity: .8;
 }
 .banner-container {
 	background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat right;
-	padding: 8% 0;
+	padding: 7% 0;
 }
 .title-text {
 	width: 75%;
@@ -53,7 +57,7 @@ ul {
 	margin-bottom: 1em;
 }
 .widget_product_categories {
-	margin-top: 1em;
+	margin-top: 1.5em;
 }
 #site-heading {
 	color: #fff;
