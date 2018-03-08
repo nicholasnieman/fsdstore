@@ -53,7 +53,7 @@ ul {
 	margin-bottom: 1em;
 }
 .widget_product_categories {
-	margin-top: 4em;
+	margin-top: 1em;
 }
 #site-heading {
 	color: #fff;
@@ -110,17 +110,18 @@ ul.products li.product h3 {
 .widget-area .widget a:not(.button) {
 	text-decoration: none;
 	display: block;
-	background-color: #d4d3d6;
-	color: #868484;
+    background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 -50px rgba(0, 0, 0, 0);
+	color: #035d62;
 	padding: 1em 0 1em 10px;
 	font-family: 'Vollkorn SC', serif;
 	text-transform: uppercase;
 	font-size: 1em;
+	height: 50px;
 	margin-bottom: 2px;
 }
 .widget-area .widget a:hover {
-	background-color: #b2b2b2 !important;
-    color: #fff !important;
+	background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 -150px rgba(0, 0, 0, 0) !important;
+	color: #035d62 !important;
 }
 ul.children {
 	margin-top: 0;
@@ -129,15 +130,28 @@ ul.children {
 	width: 90%;
 	margin-left: 10%;
 	margin-top: 0;
+	border-bottom: none;
 }
 .woocommerce-ordering,
 .price,
-mark.count,
-span.gamma {
+mark.count {
 	display: none;
 }
+span.gamma.widget-title {
+	margin-bottom: 2px;
+	color: #035d62;
+	padding: 1em 0 1em 10px;
+	font-family: 'Vollkorn SC', serif;
+	text-transform: uppercase;
+	font-size: 1em;
+	height: 50px;
+	margin-bottom: 2px;
+	font-weight: bold;
+	border: none;
+	background: url("/wp-content/uploads/2018/03/nav-heading.png") repeat-x scroll left bottom rgba(0, 0, 0, 0);
+}
 .widget-area .widget .current-cat a:first-child {
-	background-color: #0d5458;
+	background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
 	color: #ffffff;
 }
 .contact {
@@ -151,7 +165,7 @@ span.gamma {
 	margin-top: 20px;
 }
 #contact-container {
-	margin-top: 3.5em;
+	margin-top: 2em;
 }
 #contact-info {
 	margin: 0 auto;
