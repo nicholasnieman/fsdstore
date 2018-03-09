@@ -32,7 +32,7 @@
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
 		<div id="branding-container">
-			<a href="https://www.framelessshowerdoors.com" target="_blank"><img id="logo" src="/wp-content/uploads/2018/02/FSDlogo.png" alt=""></a>
+			<a href="https://www.framelessshowerdoors.com" target="_blank"><img id="logo" src="/wp-content/uploads/2018/03/FSDlogo2.png" alt=""></a>
 		</div>
 			
 			<?php
@@ -53,7 +53,7 @@
 
 		</div>
 	</header><!-- #masthead -->
-
+	<div id="spacer"></div>
 	<?php
 	/**
 	 * Functions hooked in to storefront_before_content

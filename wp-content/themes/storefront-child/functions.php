@@ -13,6 +13,7 @@ function my_theme_enqueue_styles() {
 function remove_header_content() {
 	remove_action( 'storefront_header', 'storefront_site_branding', 20 );
 	remove_action( 'storefront_header', 'storefront_skip_links', 0 );
+	remove_action('storefront_header', 'storefront_product_search', 40);
 }
 
 function my_remove_variation_price( $price ) {
@@ -28,6 +29,7 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 add_action('init', 'remove_header_content');
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
 
 
 

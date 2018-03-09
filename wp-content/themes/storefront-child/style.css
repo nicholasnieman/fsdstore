@@ -28,12 +28,36 @@ img#logo:hover,
 .product:hover img {
 	transform: scale(1.1);
 }
+img#logo{
+	width: 30%;
+	margin: 0 auto;
+}
 ul {
 	list-style-type: none;
 }
 header#masthead.site-header {
 	margin: 0 0 1.5em 0;
 	padding: 1.5em 0 0 0;
+	position: fixed;
+	width: 100%;
+	height: 180px;
+}
+.woocommerce-message {
+	background-color: #035d62;
+}
+.site-header-cart .cart-contents {
+	padding: 1em 0 ;
+}
+.right-sidebar .content-area {
+	float: right;
+    margin-right: 0;
+    margin-left: 4.347826087%;
+}
+.main-navigation ul.nav-menu>li>a {
+	padding: 1em 1em;
+}
+#spacer {
+	height: 200px;
 }
 .product:hover img {
 	opacity: .8;
@@ -50,8 +74,8 @@ header#masthead.site-header {
 	font-weight: bold;
 }
 .site-header {
-	background: linear-gradient(#21adb6, #0d5458);
 	color: #fff;
+	border-bottom: 1px solid #035d62;
 }
 .woocommerce-breadcrumb {
 	margin-bottom: 1em;
@@ -63,21 +87,23 @@ header#masthead.site-header {
 	color: #fff;
 }
 #branding-container {
-	width: 66.66%;
-	float: left;
+	width: 100%;
+	text-align: center;
 }
 .main-navigation ul li a {
-	color: #fff;
+	color: #035d62;
 	font-family: 'Vollkorn SC', serif;
 	margin: 0 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1em;
+	font-weight: bold;
 }
 ul.menu li a {
-	color: #fff;
+	color: #035d62;
 	font-size: 1em;
 	opacity: 1;
+	font-weight: bold;
 }
 .site-header ul.menu li.current-menu-item > a {
 	color: #fff;
@@ -116,7 +142,7 @@ ul.products li.product h3 {
 	display: block;
     background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 -50px rgba(0, 0, 0, 0);
 	color: #035d62;
-	padding: 1em 0 1em 10px;
+	padding: 1em 10px 1em 10px;
 	font-family: 'Vollkorn SC', serif;
 	text-transform: uppercase;
 	font-size: 1em;
