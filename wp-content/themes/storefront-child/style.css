@@ -24,7 +24,6 @@ h1 {
 input[type=search] {
 	background-color: #fff;
 }
-img#logo:hover,
 .product:hover img {
 	transform: scale(1.1);
 }
@@ -41,6 +40,8 @@ header#masthead.site-header {
 	position: fixed;
 	width: 100%;
 	height: 180px;
+	background-color: rgba(161, 252, 247,.2);
+	box-shadow: 0 0px 1px #afafaf;
 }
 .woocommerce-message {
 	background-color: #035d62;
@@ -75,7 +76,6 @@ header#masthead.site-header {
 }
 .site-header {
 	color: #fff;
-	border-bottom: 1px solid #035d62;
 }
 .woocommerce-breadcrumb {
 	margin-bottom: 1em;
@@ -91,7 +91,7 @@ header#masthead.site-header {
 	text-align: center;
 }
 .main-navigation ul li a {
-	color: #035d62;
+	color: #000;
 	font-family: 'Vollkorn SC', serif;
 	margin: 0 0;
 	text-transform: uppercase;
@@ -100,7 +100,7 @@ header#masthead.site-header {
 	font-weight: bold;
 }
 ul.menu li a {
-	color: #035d62;
+	color: #000;
 	font-size: 1em;
 	opacity: 1;
 	font-weight: bold;
@@ -110,7 +110,7 @@ ul.menu li a {
 }
 .main-navigation ul li a:hover,
 ul.menu li a:hover {
-	color: #acabad;
+	color: #7a7a7a;
 }
 .main-navigation ul li a:hover {
 	transform: scale(1.1);
