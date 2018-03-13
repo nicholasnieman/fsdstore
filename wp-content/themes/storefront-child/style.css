@@ -27,7 +27,7 @@ input[type=search] {
 .product:hover img {
 	transform: scale(1.1);
 }
-img#logo{
+img#logo {
 	width: 30%;
 	margin: 0 auto;
 }
@@ -43,7 +43,14 @@ header#masthead.site-header {
 	background-color: rgba(161, 252, 247,.2);
 	box-shadow: 0 0px 1px #afafaf;
 }
-.woocommerce-message {
+.page-title{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+.woocommerce-message,
+.woocommerce-info {
 	background-color: #035d62;
 }
 .site-header-cart .cart-contents {
@@ -63,25 +70,11 @@ header#masthead.site-header {
 .product:hover img {
 	opacity: .8;
 }
-.banner-container {
-	background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat right;
-	padding: 7% 0;
-}
-.title-text {
-	width: 75%;
-}
-.woocommerce-products-header__title {
-	margin: 0 0 0 5%;
-	font-weight: bold;
-}
 .site-header {
 	color: #fff;
 }
 .woocommerce-breadcrumb {
-	margin-bottom: 1em;
-}
-.widget_product_categories {
-	margin-top: 1.5em;
+	margin-bottom: 0;
 }
 #site-heading {
 	color: #fff;
@@ -91,26 +84,28 @@ header#masthead.site-header {
 	text-align: center;
 }
 .main-navigation ul li a {
-	color: #000;
 	font-family: 'Vollkorn SC', serif;
 	margin: 0 0;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 1em;
-	font-weight: bold;
 }
-ul.menu li a {
+.main-navigation ul li a,
+.site-header-cart .cart-contents .count,
+ul.menu li a.cart-contents {
 	color: #000;
-	font-size: 1em;
 	opacity: 1;
 	font-weight: bold;
-}
-.site-header ul.menu li.current-menu-item > a {
-	color: #fff;
+	text-shadow:
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 .main-navigation ul li a:hover,
-ul.menu li a:hover {
-	color: #7a7a7a;
+ul.menu li a:hover,
+ul.menu li a:hover span.count {
+	color: #9b9b9b;
 }
 .main-navigation ul li a:hover {
 	transform: scale(1.1);
@@ -185,7 +180,7 @@ span.gamma.widget-title {
 	color: #ffffff;
 }
 .contact {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #000;
 }
 .break {
@@ -219,18 +214,7 @@ span.gamma.widget-title {
 		font-size: 2em;
 	}
 }
-
 @media only screen and (max-width: 768px) {
-	.banner-container {
-		text-align: center;
-		background: url('/wp-content/uploads/2018/03/shopheader.jpg') no-repeat left;
-	}
-	.title-text {
-		width: 100%;
-	}
-	.woocommerce-products-header__title {
-		margin: 0 0 0 0;
-	}
 	.main-navigation ul li a:hover {
 		transform: none;
 	}

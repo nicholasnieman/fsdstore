@@ -21,15 +21,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' );
+
+if (is_shop()){
+	echo '<img src="/wp-content/uploads/2018/03/shopheader.jpg">';
+} else if (is_product_category()) {
 ?>
-
-<div class ="banner-container">
-	<div class="title-text">
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	</div>
-</div>
-
+<h1 class='woocommerce-products-header__title page-title'><?php woocommerce_page_title() ?></h1>
 <?php
+}
+
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -38,10 +38,6 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 do_action( 'woocommerce_before_main_content' );
-
-?>
-
-<?php
 
 if ( have_posts() ) {
 

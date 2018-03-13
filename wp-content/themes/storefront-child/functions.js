@@ -1,4 +1,4 @@
-// function changeBackground() {
+// function stopScroll() {
 // 	var header = document.getElementById("masthead");
 // 	var offset = window.pageYOffset;
 // 	if (offset > 235) {
@@ -10,4 +10,4 @@
 // 	}
 // }
 
-// window.addEventListener('scroll', changeBackground);
+// window.addEventListener('scroll', stopScroll);

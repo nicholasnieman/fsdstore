@@ -14,11 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' );
 ?>
 
-<div class ="banner-container">
-	<div class="title-text">
-		<h1 class="woocommerce-products-header__title page-title">Contact</h1>
-	</div>
-</div>
+<h1 class="woocommerce-products-header__title page-title">Contact</h1>
 
 <?php
 /**
