@@ -16,7 +16,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="col-full">
-	        <p style="text-align: center;">&copy; <?php echo DATE('Y');?> <a href="https://www.framelessshowerdoors.com" target="_blank">The Original Frameless Shower Doors</a>. All Rights Reserved. | <a href="<?php bloginfo('url'); ?>/terms-conditions/">Terms &amp; Conditions</a></p>
+	        <p style="text-align: center;">&copy; <?php echo DATE('Y');?> <a href="https://www.framelessshowerdoors.com" target="_blank">The Original Frameless Shower Doors</a>. All Rights Reserved.</p>
 		</div><!-- .col-full -->
 	</footer><!-- #colophon -->
 

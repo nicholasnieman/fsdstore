@@ -11,7 +11,7 @@ function positionHeader() {
 		spacer.style.height = trigger + 25 + "px";
 	} else {
 		header.style.position = "inherit";
-		header.style.marginTop = 0;
+		header.style.marginTop = "0";
 		spacer.style.height = "0";
 	}
 }
@@ -23,7 +23,6 @@ function stopScroll() {
 	} else {
 
 	}
-
 }
 
 window.addEventListener('scroll', stopScroll);
