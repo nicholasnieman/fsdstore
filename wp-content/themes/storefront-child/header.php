@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
 		<div id="branding-container">
-			<img id="logo" src="/wp-content/uploads/2018/03/FSDlogo2.png" alt="">
+			<a id="logo" href="https://framelessshowerdoors.com" target="_blank"><img src="/wp-content/uploads/2018/03/FSDlogo2.png" alt=""></a>
 		</div>
 			
 			<?php
