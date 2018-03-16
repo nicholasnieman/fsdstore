@@ -135,6 +135,12 @@ ul.products li.product h3 {
 mark.count {
 	display: none;
 }
+.woocommerce-breadcrumb a:hover {
+	color: #0645AD;
+}
+.pswp__item {
+	background-color: #fff;
+}
 
 /*******************************************************************
 ************************** Sidebar *********************************
@@ -214,7 +220,7 @@ span.gamma.widget-title {
 .break {
 	display: inline-block;
 }
-.contact:nth-child(2) {
+.contact:nth-child(3) {
 	margin-top: 20px;
 }
 #contact-container {

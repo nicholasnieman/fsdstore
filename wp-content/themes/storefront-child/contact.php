@@ -35,6 +35,7 @@ do_action( 'woocommerce_before_main_content' );
 		<ul>
 			<li class="contact"><strong>Headquarters</strong> <br>
 			3591 NW 120th Avenue <br> Coral Springs, FL 33065</li>
+			<li class="contact"><a href="https://www.framelessshowerdoors.com" target="_blank">www.FramelessShowerDoors.com</a></li>
 			<li class="contact"><i class="fas fa-phone-square"></i> <a href="tel:+8553726537">(855) 372-6537</a></li>
 			<li class="contact"><i class="fas fa-envelope-square"></i> <a href="mailto:info@fsdae.com">info@fsdae.com</a></li>
 		</ul>
