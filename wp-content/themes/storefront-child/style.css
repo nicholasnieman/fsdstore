@@ -21,6 +21,9 @@ h1 {
 	letter-spacing: 1px;
 	font-size: 2em;
 }
+a {
+	color: #0645AD;
+}
 
 /*******************************************************************
 *************************** Header *********************************
@@ -65,16 +68,18 @@ header#masthead.site-header {
 	letter-spacing: 1px;
 	font-size: 1em;
 }
+.site-header ul.menu li.current-menu-item > a,
 .main-navigation ul li a,
 .site-header-cart .cart-contents .count,
 ul.menu li a.cart-contents {
 	color: #fff;
 	opacity: 1;
 }
+.site-header ul.menu li.current-menu-item > a:hover,
 .main-navigation ul li a:hover,
 ul.menu li a:hover,
 ul.menu li a:hover span.count {
-	color: #efca51;
+	color: #d6b753;
 }
 .main-navigation ul li a:hover {
 	transform: scale(1.1);
@@ -107,6 +112,9 @@ ul.menu li a:hover span.count {
 }
 .product:hover img {
 	opacity: .8;
+}
+.product:hover h2{
+	color: #035d62;
 }
 .woocommerce-breadcrumb {
 	margin-bottom: 0;
@@ -146,18 +154,19 @@ ul {
 .widget-area .widget a:not(.button) {
 	text-decoration: none;
 	display: block;
-    background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 -50px rgba(0, 0, 0, 0);
-	color: #035d62;
-	padding: 1em 10px 1em 10px;
+	color: #000;
+	padding: .9em 10px .9em 10px;
 	font-family: 'Vollkorn SC', serif;
 	text-transform: uppercase;
-	font-size: 1em;
-	height: 50px;
+	font-size: .9em;
 	margin-bottom: 2px;
+	border-bottom: 1px solid #000;
+	letter-spacing: 1px;
+	font-weight: bold;
 }
 .widget-area .widget a:hover {
-	background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 -150px rgba(0, 0, 0, 0) !important;
-	color: #035d62 !important;
+	color: #d6b753 !important;
+	border-bottom: 1px solid #d6b753 !important;
 }
 ul.children {
 	margin-top: 0;
@@ -170,20 +179,20 @@ ul.children {
 }
 span.gamma.widget-title {
 	margin-bottom: 2px;
-	color: #035d62;
-	padding: 1em 0 1em 10px;
+	color: #000;
+	padding: 1em 0 .9em 10px;
 	font-family: 'Vollkorn SC', serif;
 	text-transform: uppercase;
-	font-size: 1em;
-	height: 50px;
+	font-size: .9em;
 	margin-bottom: 2px;
 	font-weight: bold;
 	border: none;
-	background: url("/wp-content/uploads/2018/03/nav-heading.png") repeat-x scroll left bottom rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #000;
+	letter-spacing: 1px;
 }
 .widget-area .widget .current-cat a:first-child {
-	background: url("/wp-content/uploads/2018/03/nav-background.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
-	color: #ffffff;
+	color: #398b85;
+	border-bottom: 1px solid #398b85;
 }
 
 /*******************************************************************
@@ -199,7 +208,7 @@ span.gamma.widget-title {
 *******************************************************************/
 
 .contact {
-	font-size: 1em;
+	font-size: .9em;
 	color: #000;
 }
 .break {
@@ -215,11 +224,11 @@ span.gamma.widget-title {
 	margin: 0 auto;
 	width: 80%;
 	padding: 5%;
-	background: #eeeeee;
+	background: #f0f0f0;
 }
 #contact-heading {
 	font-family: 'Vollkorn SC', serif;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #0d5458;
@@ -227,7 +236,6 @@ span.gamma.widget-title {
 #contact-heading-container {
 	text-align: center;
 }
-
 
 /*******************************************************************
 *********************** Media Queries ******************************
@@ -253,7 +261,7 @@ span.gamma.widget-title {
 		float: left;
 	}
 	a#logo {
-	width: 100%
+		width: 100%
 	}
 	.storefront-primary-navigation {
 		background-color: #fff;
