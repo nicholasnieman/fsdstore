@@ -141,7 +141,9 @@ mark.count {
 .pswp__item {
 	background-color: #fff;
 }
-
+li.additional_information_tab {
+    display: none !important;
+}
 /*******************************************************************
 ************************** Sidebar *********************************
 *******************************************************************/
@@ -289,9 +291,21 @@ div.woocommerce h2 {
     	width: 200px;
     	margin: 0 auto 5px auto;
     	text-transform: none;
+    	letter-spacing: 0;
+	}
+	.main-navigation ul li a:hover,
+	.widget-area .widget a:not(.button):hover {
+		border: 2px solid #d6b753; 
 	}
 	.main-navigation ul li:last-child {
 		margin-bottom: 20px;
+	}
+	.widget_product_categories ul .children {
+		margin: 0 auto 5px auto;
+	}
+	.widget-area .widget .current-cat a:first-child {
+	color: #398b85;
+	border: 2px solid #398b85;
 	}
 	div#primary {
 		margin: 0 auto;
