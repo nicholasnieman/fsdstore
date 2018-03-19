@@ -20,6 +20,7 @@ h1 {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 2em;
+	font-weight: bold;
 }
 a {
 	color: #0645AD;
@@ -96,7 +97,6 @@ ul.menu li a:hover span.count {
 	width: 100%;
 	text-align: center;
 	margin-bottom: 1em;
-	font-weight: bold;
 }
 .product_title {
 	font-weight: bold;
@@ -209,6 +209,9 @@ span.gamma.widget-title {
 .woocommerce-MyAccount-navigation-link--downloads {
 	display: none;
 }
+div.woocommerce h2 {
+	display: none;
+}
 
 /*******************************************************************
 ************************** Contact *********************************
@@ -274,13 +277,24 @@ span.gamma.widget-title {
 		background-color: #fff;
 	}
 	.main-navigation ul li a,
-	.site-header-cart .cart-contents .count,
-	ul.menu li a.cart-contents {
-		color: #000;
-		font-weight: bold;
+	.widget-area .widget a:not(.button) {
+		color: #333;
+		border: 2px solid #333;
+		font-weight: 600;
+    	border-radius: 2px;
+    	padding: .6180469716em .875em;
+    	font-size: .875em;
+    	text-align: center;
+    	font-family: "Source Sans Pro",HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    	width: 200px;
+    	margin: 0 auto 5px auto;
+    	text-transform: none;
 	}
-	li.product a img {
-		max-width: 350px;
+	.main-navigation ul li:last-child {
+		margin-bottom: 20px;
+	}
+	div#primary {
+		margin: 0 auto;
 	}
 }
 @media only screen and (max-width: 568px) {
