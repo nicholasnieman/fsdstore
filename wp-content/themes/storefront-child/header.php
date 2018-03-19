@@ -17,6 +17,8 @@
 
 <?php wp_head(); ?>
 </head>
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+
 
 <body <?php body_class(); ?>>
 

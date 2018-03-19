@@ -51,7 +51,7 @@ header#masthead.site-header {
 	padding: 0 0 ;
 }
 .main-navigation ul.nav-menu>li>a {
-	padding: 0 1em;
+	padding: 0 .9em;
 }
 .site-header {
 	color: #fff;
@@ -195,6 +195,7 @@ span.gamma.widget-title {
 	border: none;
 	border-bottom: 1px solid #000;
 	letter-spacing: 1px;
+	display: none;
 }
 .widget-area .widget .current-cat a:first-child {
 	color: #398b85;
@@ -278,12 +279,15 @@ span.gamma.widget-title {
 		color: #000;
 		font-weight: bold;
 	}
+	li.product a img {
+		max-width: 350px;
+	}
 }
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 568px) {
 	#contact-heading {
 		font-size: 1em;
 	}
 	.contact {
-		font-size: 1em;
+		font-size: .7em;
 	}
 }
