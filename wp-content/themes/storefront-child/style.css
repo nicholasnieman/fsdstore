@@ -36,7 +36,9 @@ a {
 	display: block;
 }
 #logo:hover {
-	transform: scale(1.05);
+	transform: scale(1.01);
+	opacity: .8;
+	transition: all 150ms linear;
 }
 header#masthead.site-header {
 	padding: 20px 0 0 0;
@@ -83,7 +85,7 @@ ul.menu li a:hover span.count {
 	color: #d6b753;
 }
 .main-navigation ul li a:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 
 /*******************************************************************
@@ -92,6 +94,7 @@ ul.menu li a:hover span.count {
 
 .product:hover img {
 	transform: scale(1.1);
+	transition: all 150ms linear;
 }
 .page-title {
 	width: 100%;
@@ -112,9 +115,11 @@ ul.menu li a:hover span.count {
 }
 .product:hover img {
 	opacity: .8;
+	transition: all 150ms linear;
 }
 .product:hover h2{
 	color: #035d62;
+	transition: all 150ms linear;
 }
 .woocommerce-breadcrumb {
 	margin-bottom: 0;
@@ -143,6 +148,9 @@ mark.count {
 }
 li.additional_information_tab {
     display: none !important;
+}
+ul.wc-tabs {
+	display: none;
 }
 /*******************************************************************
 ************************** Sidebar *********************************
@@ -203,7 +211,12 @@ span.gamma.widget-title {
 	color: #398b85;
 	border-bottom: 1px solid #398b85;
 }
-
+/*******************************************************************
+*************************** Footer *********************************
+*******************************************************************/
+.site-footer a:not(.button) {
+	color: #035d62;
+}
 /*******************************************************************
 ************************** Login ***********************************
 *******************************************************************/
@@ -221,7 +234,7 @@ div.woocommerce h2 {
 
 .contact {
 	font-size: .9em;
-	color: #000;
+	color: #6d6d6d;
 }
 .break {
 	display: inline-block;
@@ -295,7 +308,7 @@ div.woocommerce h2 {
 	}
 	.main-navigation ul li a:hover,
 	.widget-area .widget a:not(.button):hover {
-		border: 2px solid #d6b753; 
+		border: 2px solid #d6b753;
 	}
 	.main-navigation ul li:last-child {
 		margin-bottom: 20px;
@@ -309,6 +322,17 @@ div.woocommerce h2 {
 	}
 	div#primary {
 		margin: 0 auto;
+	}
+	ul.products li.product.product-category .woocommerce-loop-category__title {
+		background-color: #eeeeee;
+    	color: #333333;
+    	padding: .6180469716em 1.41575em;
+    	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    	letter-spacing: 0;
+    	text-transform: none;
+    	font-size: 1em;
+    	width: 250px;
+    	margin: 0 auto;
 	}
 }
 @media only screen and (max-width: 568px) {

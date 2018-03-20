@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' );
 
 if (is_shop()){
-	echo '<img src="/wp-content/uploads/2018/03/Banner.jpg">';
+	echo '<img id="banner-image" src="/wp-content/uploads/2018/03/Banner.jpg">';
 } else if (is_product_category()) {
 ?>
 <h1 class='woocommerce-products-header__title page-title'><?php woocommerce_page_title() ?></h1>
