@@ -36,9 +36,8 @@ a {
 	display: block;
 }
 #logo:hover {
-	transform: scale(1.01);
-	opacity: .8;
-	transition: all 150ms linear;
+	opacity: .7;
+	transition: all 200ms linear;
 }
 header#masthead.site-header {
 	padding: 20px 0 0 0;
@@ -214,6 +213,7 @@ span.gamma.widget-title {
 /*******************************************************************
 *************************** Footer *********************************
 *******************************************************************/
+
 .site-footer a:not(.button) {
 	color: #035d62;
 }
@@ -334,6 +334,10 @@ div.woocommerce h2 {
     	width: 250px;
     	margin: 0 auto;
 	}
+	ul.products li.product.product-category .woocommerce-loop-category__title:hover {
+		background-color: #d5d5d5;
+	}
+	#d5d5d5
 }
 @media only screen and (max-width: 568px) {
 	#contact-heading {
