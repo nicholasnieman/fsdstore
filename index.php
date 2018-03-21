@@ -1,6 +1,7 @@
 <?php
+/** Get site user ID */
 
-echo(exec("whoami"));die();
+// echo(exec("whoami"));die();
 
 /**
  * Front to the WordPress application. This file doesn't do anything, but loads
