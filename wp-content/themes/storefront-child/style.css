@@ -36,7 +36,7 @@ a {
 	display: block;
 }
 #logo:hover {
-	opacity: .7;
+	opacity: .8;
 	transition: all 200ms linear;
 }
 header#masthead.site-header {
@@ -151,6 +151,7 @@ li.additional_information_tab {
 ul.wc-tabs {
 	display: none;
 }
+
 /*******************************************************************
 ************************** Sidebar *********************************
 *******************************************************************/
@@ -210,6 +211,7 @@ span.gamma.widget-title {
 	color: #398b85;
 	border-bottom: 1px solid #398b85;
 }
+
 /*******************************************************************
 *************************** Footer *********************************
 *******************************************************************/
@@ -217,6 +219,10 @@ span.gamma.widget-title {
 .site-footer a:not(.button) {
 	color: #035d62;
 }
+.site-footer a:not(.button):hover {
+	color: #398b85;
+}
+
 /*******************************************************************
 ************************** Login ***********************************
 *******************************************************************/
@@ -337,7 +343,6 @@ div.woocommerce h2 {
 	ul.products li.product.product-category .woocommerce-loop-category__title:hover {
 		background-color: #d5d5d5;
 	}
-	#d5d5d5
 }
 @media only screen and (max-width: 568px) {
 	#contact-heading {
