@@ -25,6 +25,11 @@ h1 {
 a {
 	color: #0645AD;
 }
+body, #page {
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
 /*******************************************************************
 *************************** Header *********************************
@@ -150,6 +155,9 @@ li.additional_information_tab {
 }
 ul.wc-tabs {
 	display: none;
+}
+#content {
+	  flex: 1;
 }
 
 /*******************************************************************
