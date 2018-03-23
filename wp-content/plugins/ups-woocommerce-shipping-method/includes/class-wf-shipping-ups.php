@@ -18,10 +18,12 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 	);
     
     private $customer_classification_code = array(
-        'NA' => "Default",
+		'NA' => "Default",
 		'00' => "Rates Associated with Shipper Number",
 		'01' => "Daily Rates",
 		'04' => "Retail Rates",
+		'05' => "Regional Rates",
+		'06' => "General List Rates",
 		'53' => "Standard List Rates",
 	);
 
@@ -88,9 +90,9 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 		
 		// WF: Load UPS Settings.
 		$ups_settings 		= get_option( 'woocommerce_'.WF_UPS_ID.'_settings', null ); 
-		$api_mode      		= 'Live';
+		$api_mode      		= isset( $ups_settings['api_mode'] ) ? $ups_settings['api_mode'] : 'Test';
 		if( "Live" == $api_mode ) {
-			$this->endpoint = 'https://www.ups.com/ups.app/xml/Rate';
+			$this->endpoint = 'https://onlinetools.ups.com/ups.app/xml/Rate';
 		}
 		else {
 			$this->endpoint = 'https://wwwcie.ups.com/ups.app/xml/Rate';
@@ -144,7 +146,8 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 		$this->origin_postcode 		= isset( $this->settings['origin_postcode'] ) ? $this->settings['origin_postcode'] : '';
 		$this->origin_country_state = isset( $this->settings['origin_country_state'] ) ? $this->settings['origin_country_state'] : '';
 		$this->debug      			= isset( $this->settings['debug'] ) && $this->settings['debug'] == 'yes' ? true : false;
-
+		$this->api_mode      		= isset( $this->settings['api_mode'] ) ? $this->settings['api_mode'] : 'Test';
+		
 		// Pickup and Destination
 		$this->pickup			= isset( $this->settings['pickup'] ) ? $this->settings['pickup'] : '01';
         $this->customer_classification = isset( $this->settings['customer_classification'] ) ? $this->settings['customer_classification'] : '99';
@@ -179,7 +182,9 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
     		$this->origin_country = $this->origin_country_state;
     		$this->origin_state   = '';
     	endif;
-        $this->origin_state   = (isset( $this->settings['origin_state'] )&& !empty($this->settings['origin_state'])) ? $this->settings['origin_state'] : $this->origin_state;
+		$this->origin_addressline = isset($this->settings['origin_addressline']) ? $this->settings['origin_addressline'] : '';
+		$this->origin_city = isset($this->settings['origin_city']) ? $this->settings['origin_city'] : '';
+        $this->origin_custom_state   = (isset( $this->settings['origin_custom_state'] )&& !empty($this->settings['origin_custom_state'])) ? $this->settings['origin_custom_state'] : $this->origin_state;
 		
 		// COD selected
 		$this->cod=false;
@@ -275,28 +280,8 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 	public function admin_options() {
 		// Check users environment supports this method
 		$this->environment_check();
+		include_once("market.php");
 		
-		?>
-		<div class="wf-banner updated below-h2">
-  			<p class="main">
-			<ul>
-				<li style='color:red;'><strong>Your Business is precious! Go Premium!</li></strong>
-				<li><strong>WooForce UPS Premium version for WooCommerce streamlines your complete shipping process and saves time.</strong></li>
-				<li><strong>- Timely compatibility updates and bug fixes.</strong ></li>
-				<li><strong>- Premium Support:</strong> Faster and time bound response for support requests.</li>
-				<li><strong>- More Features:</strong> Label Printing with Postage, Automatic Shipment Tracking, Box Packing, Weight based Packing and Many More..</li>
-			</ul>
-			</p>
-			<p><a href="http://www.wooforce.com/product/ups-woocommerce-shipping-with-print-label-plugin/" target="_blank" class="button button-primary">Upgrade to Premium Version</a> <a href="http://ups.wooforce.com/wp-admin/admin.php?page=wc-settings&tab=shipping&section=wf_shipping_ups" target="_blank" class="button">Live Demo</a></p>
-		</div>
-		<style>
-		.wf-banner img {
-			float: right;
-			margin-left: 1em;
-			padding: 15px 0
-		}
-		</style>
-		<?php 
 
 		// Show settings
 		parent::admin_options();
@@ -474,11 +459,8 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 		foreach ( $posted_services as $code => $settings ) {
 
 			$services[ $code ] = array(
-				'name'               => woocommerce_clean( $settings['name'] ),
-				'order'              => woocommerce_clean( $settings['order'] ),
+				'order'              => wc_clean( $settings['order'] ),
 				'enabled'            => isset( $settings['enabled'] ) ? true : false,
-				'adjustment'         => woocommerce_clean( $settings['adjustment'] ),
-				'adjustment_percent' => str_replace( '%', '', woocommerce_clean( $settings['adjustment_percent'] ) )
 			);
 
 		}
@@ -507,6 +489,18 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
     public function init_form_fields() {
 	    global $woocommerce;
 
+		if ( WF_UPS_ADV_DEBUG_MODE == "on" ) { // Test mode is only for development purpose.
+            $api_mode_options = array(
+                'Test'           => __( 'Test', 'ups-woocommerce-shipping' ),
+            );
+        }
+        else {
+            $api_mode_options = array(
+                'Live'           => __( 'Live', 'ups-woocommerce-shipping' ),
+                'Test'           => __( 'Test', 'ups-woocommerce-shipping' ),
+            );
+        }
+		
     	$this->form_fields  = array(
 			'enabled'                => array(
 				'title'              => __( 'Realtime Rates', 'ups-woocommerce-shipping' ),
@@ -547,6 +541,19 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 				'type'               => 'checkbox',
 				'default'            => 'no',
 				'description'        => __( 'Enable debug mode to show debugging information on your cart/checkout.', 'ups-woocommerce-shipping' ),
+                'desc_tip'           => true
+			),
+		    'api'                    => array(
+				'title'              => __( 'Generic API Settings', 'ups-woocommerce-shipping' ),
+				'type'               => 'title',
+				'description'        => __( 'Obtain UPS account credentials by registering on UPS website.', 'ups-woocommerce-shipping' )
+		    ),
+			'api_mode' 			     => array(
+				'title'              => __( 'API Mode', 'ups-woocommerce-shipping' ),
+				'type'               => 'select',
+				'default'            => 'yes',
+				'options'            => $api_mode_options,
+				'description'        => __( 'Set as Test to switch to UPS api test servers. Transaction will be treated as sample transactions by UPS.', 'ups-woocommerce-shipping' ),
                 'desc_tip'           => true
 			),
 			'ups_user_name'       => array(
@@ -628,7 +635,7 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 		    'origin_country_state'    => array(
 				'type'                => 'single_select_country',
 			),
-            'origin_state'        => array(
+            'origin_custom_state'        => array(
 				'title'           => __( 'Origin State Code', 'ups-woocommerce-shipping' ),
 				'type'            => 'text',
 				'description'     => __( 'Specify shipper state province code if state not listed with Origin Country.', 'ups-woocommerce-shipping' ),
@@ -662,6 +669,16 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 				'default'         => '',
                 'desc_tip'        => true
 			),
+			'customer_classification'  => array(
+				'title'		   => __( 'Customer Classification', 'ups-woocommerce-shipping' ),
+				'type'			=> 'select',
+				'css'			  => 'width: 250px;',
+				'class'			  => 'chosen_select wc-enhanced-select',
+				'default'		 => 'NA',
+				'options'		 => $this->customer_classification_code,
+				'description'	 => __( 'Valid if negotiated rates has not been selected.' ),
+				'desc_tip'		=> true
+			),
         );   
     }   
 
@@ -672,7 +689,7 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
      * @param mixed $package
      * @return void
      */
-    public function calculate_shipping( $package ) {
+    public function calculate_shipping( $package=array() ) {
     	global $woocommerce;
 
     	$rates            = array();
@@ -750,6 +767,7 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 				if ( $this->debug ) {
 					if ( ! $xml ) {
 						$this->debug( __( 'Failed loading XML', 'ups-woocommerce-shipping' ), 'error' );
+						continue;
 					}
 				}
 
@@ -927,18 +945,16 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 	    		$request .= "		<Description>" . $this->pickup_code[$this->pickup] . "</Description>" . "\n";
 	    		$request .= "	</PickupType>" . "\n";
                 
-                if ( 'US' == $this->origin_country ) {
-                    if ( $this->negotiated ) {
-                        $request .= "	<CustomerClassification>" . "\n";
-                        $request .= "		<Code>" . "00" . "</Code>" . "\n";
-                        $request .= "	</CustomerClassification>" . "\n";   
-                    }
-                    elseif ( !empty( $this->customer_classification ) && $this->customer_classification != 'NA' ) {
-                        $request .= "	<CustomerClassification>" . "\n";
-                        $request .= "		<Code>" . $this->customer_classification . "</Code>" . "\n";
-                        $request .= "	</CustomerClassification>" . "\n";   
-                    }
-                }
+				if ( $this->negotiated ) {
+					$request .= "	<CustomerClassification>" . "\n";
+					$request .= "		<Code>" . "00" . "</Code>" . "\n";
+					$request .= "	</CustomerClassification>" . "\n";   
+				}
+				elseif ( !empty( $this->customer_classification ) && $this->customer_classification != 'NA' ) {
+					$request .= "	<CustomerClassification>" . "\n";
+					$request .= "		<Code>" . $this->customer_classification . "</Code>" . "\n";
+					$request .= "	</CustomerClassification>" . "\n";   
+				}
 
 				// Shipment information
 	    		$request .= "	<Shipment>" . "\n";
@@ -975,8 +991,8 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 	    		$request .= "				<AddressLine>" . $this->origin_addressline . "</AddressLine>" . "\n";
                 $request .= $this->wf_get_postcode_city( $this->origin_country, $this->origin_city, $this->origin_postcode );
 	    		$request .= "				<CountryCode>" . $this->origin_country . "</CountryCode>" . "\n";
-	    		if ( $this->negotiated && $this->origin_state ) {
-	    		$request .= "				<StateProvinceCode>" . $this->origin_state . "</StateProvinceCode>" . "\n";
+	    		if ( $this->negotiated && $this->origin_custom_state ) {
+	    		$request .= "				<StateProvinceCode>" . $this->origin_custom_state . "</StateProvinceCode>" . "\n";
 	    		}
 	    		$request .= "			</Address>" . "\n";
 	    		$request .= "		</ShipFrom>" . "\n";
@@ -1036,7 +1052,8 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 		$this->cod=sizeof($package['contents'])>1?false:$this->cod; // For multiple packages COD is turned off
     	foreach ( $package['contents'] as $item_id => $values ) {
     		$ctr++;
-
+    		$values['data'] = $this->wf_load_product( $values['data'] );
+    		
     		if ( !( $values['quantity'] > 0 && $values['data']->needs_shipping() ) ) {
     			$this->debug( sprintf( __( 'Product #%d is virtual. Skipping.', 'ups-woocommerce-shipping' ), $ctr ) );
     			continue;
@@ -1048,14 +1065,16 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
     		}
 
 			// get package weight
-    		$weight = woocommerce_get_weight( $values['data']->get_weight(), $this->weight_unit );
+
+    		$weight = wc_get_weight( $values['data']->get_weight(), $this->weight_unit );
+
 
 			// get package dimensions
-    		if ( $values['data']->length && $values['data']->height && $values['data']->width ) {
+    		if ( $values['data']->get_length() && $values['data']->get_height() && $values['data']->get_width() ) {
 
-				$dimensions = array( number_format( woocommerce_get_dimension( $values['data']->length, $this->dim_unit ), 2, '.', ''),
-									 number_format( woocommerce_get_dimension( $values['data']->height, $this->dim_unit ), 2, '.', ''),
-									 number_format( woocommerce_get_dimension( $values['data']->width, $this->dim_unit ), 2, '.', '') );
+				$dimensions = array( number_format( wc_get_dimension( $values['data']->get_length(), $this->dim_unit ), 2, '.', ''),
+									 number_format( wc_get_dimension( $values['data']->get_height(), $this->dim_unit ), 2, '.', ''),
+									 number_format( wc_get_dimension( $values['data']->get_width(), $this->dim_unit ), 2, '.', '') );
 				sort( $dimensions );
 
 			}
@@ -1070,7 +1089,7 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 			$request .= '	</PackagingType>' . "\n";
 			$request .= '	<Description>Rate</Description>' . "\n";
 
-			if ( $values['data']->length && $values['data']->height && $values['data']->width ) {
+			if ( $values['data']->get_length() && $values['data']->get_height() && $values['data']->get_width() ) {
 				$request .= '	<Dimensions>' . "\n";
 				$request .= '		<UnitOfMeasurement>' . "\n";
 				$request .= '	 		<Code>' . $this->dim_unit . '</Code>' . "\n";
@@ -1080,7 +1099,7 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 				$request .= '		<Height>' . $dimensions[0] . '</Height>' . "\n";
 				$request .= '	</Dimensions>' . "\n";
 			}
-			if((isset($params['service_code'])&&$params['service_code']==92)||($this->service_code==92))// Surepost Less Than 1LBS
+			if((isset($params['service_code'])&&$params['service_code']==92))// Surepost Less Than 1LBS
 			{
 				if($this->weight_unit=='LBS'){ // make sure weight in pounds
 					$weight_ozs=$weight*16;
@@ -1111,7 +1130,7 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
 					$request .= '		<InsuredValue>' . "\n";
 					$request .= '			<CurrencyCode>' . get_woocommerce_currency() . '</CurrencyCode>' . "\n";
 					// WF: Calculating monetary value of cart item for insurance.
-					$request .= '			<MonetaryValue>' . (string) ( $values['data']->get_price() * $cart_item_qty ). '</MonetaryValue>' . "\n";
+					$request .= '			<MonetaryValue>' . (string) ( $values['data']->get_price() ). '</MonetaryValue>' . "\n";
 					$request .= '		</InsuredValue>' . "\n";
 				}
 				//Code
@@ -1154,14 +1173,17 @@ class WF_Shipping_UPS extends WC_Shipping_Method {
     }
 	
 	public function wf_set_cod_details($order){
-		if($order->id){
-			$this->cod=get_post_meta($order->id,'_wf_ups_cod',true);
-			$this->cod_total=$order->get_total();
+		$orderid = ( WC()->version < '2.7.0' ) ? $order->id : $order->get_id();
+		if($orderid){
+			$this->cod = get_post_meta($orderid,'_wf_ups_cod',true);
+			$this->cod_total = $order->get_total();
 		}
 	}
 	
-	public function wf_set_service_code($service_code){
-		$this->service_code=$service_code;
+	private function wf_load_product( $product ){
+		if( !$product ){
+			return false;
+		}
+		return ( WC()->version < '2.7.0' ) ? $product : new wf_product( $product );
 	}
-
 }
