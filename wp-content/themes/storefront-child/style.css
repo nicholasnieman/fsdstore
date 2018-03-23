@@ -96,10 +96,6 @@ ul.menu li a:hover span.count {
 ************************ Main Content ******************************
 *******************************************************************/
 
-.product:hover img {
-	transform: scale(1.1);
-	transition: all 150ms linear;
-}
 .page-title {
 	width: 100%;
 	text-align: center;
@@ -117,8 +113,9 @@ ul.menu li a:hover span.count {
     margin-right: 0;
     margin-left: 4.347826087%;
 }
-.product:hover img {
+li.product:hover img {
 	opacity: .8;
+	transform: scale(1.1);
 	transition: all 150ms linear;
 }
 .product:hover h2{
@@ -164,9 +161,6 @@ ul.wc-tabs {
 ************************** Sidebar *********************************
 *******************************************************************/
 
-ul {
-	list-style-type: none;
-}
 .widget_product_categories ul li {
 	margin-bottom: 0;
 	padding-left: 0;
