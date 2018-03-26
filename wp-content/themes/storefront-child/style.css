@@ -280,6 +280,9 @@ div.woocommerce h2 {
 	}
 }
 @media only screen and (max-width: 767px) {
+	.col-full {
+		margin: 0 1.8em;
+	}
 	.main-navigation ul li a:hover {
 		transform: none;
 	}
@@ -347,11 +350,12 @@ div.woocommerce h2 {
 		background-color: #d5d5d5;
 	}
 	div#secondary {
-		position: fixed;
+		position: absolute;
 		left: -295px;
 		background-color: rgba(0,0,0,.5);
 		width: 295px;
 		transition: all 250ms linear;
+		display: block;
 	}
 	span.gamma.widget-title {
 		display: block;

@@ -17,20 +17,26 @@ function positionHeader() {
 }
 
 function stopScroll() {
-	var screenWidth 	  = screen.width;
+	var screenWidth = screen.width;
 	if (screenWidth >= 768) {
 		positionHeader();
-	} else {
-
-	}
+	} 
 }
 
 function positionSidebar() {
 	var header = document.getElementById("masthead"),
 		headerHeight = header.offsetHeight,
-		sidebar = document.getElementById("secondary");
-		
-	sidebar.style.top = headerHeight + "px";
+		sidebar = document.getElementById("secondary"),
+		offset 	= window.pageYOffset,
+		screenWidth = screen.width;
+	if(screenWidth <= 767) {
+		if(offset <= headerHeight){
+			sidebar.style.top = headerHeight + "px";
+		} else if(offset > headerHeight) {
+			sidebar.style.top = 0;
+			sidebar.style.position = "fixed";
+		}
+	}
 }
 
 function toggleSidebar() {
@@ -40,7 +46,7 @@ function toggleSidebar() {
 
 window.addEventListener('scroll', stopScroll);
 
-window.addEventListener('load', positionSidebar);
+window.addEventListener('scroll', positionSidebar);
 
 
 
