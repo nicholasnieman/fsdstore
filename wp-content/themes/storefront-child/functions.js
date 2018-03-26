@@ -25,5 +25,23 @@ function stopScroll() {
 	}
 }
 
+function positionSidebar() {
+	var header = document.getElementById("masthead"),
+		headerHeight = header.offsetHeight,
+		sidebar = document.getElementById("secondary");
+		
+	sidebar.style.top = headerHeight + "px";
+}
+
+function toggleSidebar() {
+	var sidebar = document.getElementById("secondary");
+	sidebar.classList.toggle("toggle_sidebar");
+}
+
 window.addEventListener('scroll', stopScroll);
+
+window.addEventListener('load', positionSidebar);
+
+
+
 
