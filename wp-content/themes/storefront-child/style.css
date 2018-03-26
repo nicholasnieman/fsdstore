@@ -351,6 +351,7 @@ div.woocommerce h2 {
 		left: -295px;
 		background-color: rgba(0,0,0,.5);
 		width: 295px;
+		transition: all 250ms linear;
 	}
 	span.gamma.widget-title {
 		display: block;
@@ -372,7 +373,7 @@ div.woocommerce h2 {
 	}
 	.toggle_sidebar {
 		left: 0 !important;
-		transition: all 200ms linear;
+		transition: all 250ms linear;
 	}
 }
 @media only screen and (max-width: 568px) {
