@@ -31,7 +31,7 @@ function positionSidebar() {
 		screenWidth = screen.width;
 
 	if(screenWidth <= 767) {
-		if(offset <= headerHeight){
+		if(offset <= headerHeight) {
 			sidebar.style.top = headerHeight + "px";
 		} else if(offset > headerHeight) {
 			sidebar.style.top = 0;
