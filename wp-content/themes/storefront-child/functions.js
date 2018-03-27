@@ -28,18 +28,15 @@ function positionSidebar() {
 		headerHeight = header.offsetHeight,
 		sidebar = document.getElementById("secondary"),
 		offset 	= window.pageYOffset,
-		screenWidth = screen.width,
-		orientation = window.screen.orientation.type;
+		screenWidth = screen.width;
 
 	if(screenWidth <= 767) {
 		if(offset <= headerHeight){
 			sidebar.style.top = headerHeight + "px";
-		} else if(offset > headerHeight && orientation !== "landscape-primary") {
+		} else if(offset > headerHeight) {
 			sidebar.style.top = 0;
 			sidebar.style.position = "fixed";
-		} else if( orientation == "landscape-primary") {
-			sidebar.style.position = "absolute";
-		}
+		} 
 	}
 }
 
