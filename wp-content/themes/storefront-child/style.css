@@ -354,7 +354,6 @@ div.woocommerce h2 {
 		background-color: rgba(0,0,0,.5);
 		width: 295px;
 		transition: all 250ms linear;
-		display: block;
 	}
 	span.gamma.widget-title {
 		display: block;

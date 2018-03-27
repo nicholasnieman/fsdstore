@@ -30,14 +30,14 @@ function positionSidebar() {
 		offset 	= window.pageYOffset,
 		screenWidth = screen.width,
 		orientation = window.screen.orientation.type;
-		
+
 	if(screenWidth <= 767) {
 		if(offset <= headerHeight){
 			sidebar.style.top = headerHeight + "px";
 		} else if(offset > headerHeight && orientation !== "landscape-primary") {
 			sidebar.style.top = 0;
 			sidebar.style.position = "fixed";
-		}else if( orientation == "landscape-primary") {
+		} else if( orientation == "landscape-primary") {
 			sidebar.style.position = "absolute";
 		}
 	}
