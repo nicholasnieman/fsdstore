@@ -24,11 +24,11 @@ function stopScroll() {
 }
 
 function positionSidebar() {
-	var header = document.getElementById("masthead"),
+	var header 		 = document.getElementById("masthead"),
 		headerHeight = header.offsetHeight,
-		sidebar = document.getElementById("secondary"),
-		offset 	= window.pageYOffset,
-		screenWidth = screen.width;
+		sidebar 	 = document.getElementById("secondary"),
+		offset 		 = window.pageYOffset,
+		screenWidth  = screen.width;
 
 	if(screenWidth <= 767) {
 		if(offset <= headerHeight) {

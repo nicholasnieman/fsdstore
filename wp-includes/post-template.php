@@ -1340,7 +1340,7 @@ function wp_page_menu( $args = array() ) {
 	// Show Home in the menu
 	if ( ! empty($args['show_home']) ) {
 		if ( true === $args['show_home'] || '1' === $args['show_home'] || 1 === $args['show_home'] )
-			$text = __('Home');
+			$text = __('Shop');
 		else
 			$text = $args['show_home'];
 		$class = '';
