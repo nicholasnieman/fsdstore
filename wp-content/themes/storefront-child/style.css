@@ -350,7 +350,6 @@ div.woocommerce h2 {
 		background-color: #d5d5d5;
 	}
 	div#secondary {
-		position: absolute;
 		left: -295px;
 		background-color: rgba(0,0,0,.5);
 		width: 295px;
