@@ -1,46 +1,43 @@
 <?php
 /*
-	Plugin Name: UPS (BASIC) WooCommerce Shipping
+	Plugin Name: UPS WooCommerce Shipping
 	Plugin URI: https://www.xadapter.com/product/woocommerce-ups-shipping-plugin-with-print-label/
-	Description: Obtain Real time shipping rates via the UPS Shipping API.
-	Version: 1.2.11
-	Author: XAdapter
-	Author URI: https://www.xadapter.com/
+	Description: Obtain Real time shipping rates, Print shipping labels and Track Shipment via the UPS Shipping API.
+	Version: 3.9.12
+	Author: Xadapter
+	Author URI: https://www.xadapter.com/vendor/wooforce/
 	WC requires at least: 2.6.0
 	WC tested up to: 3.3
 */
 
-//Dev Version: 2.6.1
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
-function wf_ups_basic_pre_activation_check(){
-	if ( is_plugin_active('ups-woocommerce-shipping/ups-woocommerce-shipping.php') ){
+function wf_ups_pre_activation_check(){
+	//check if basic version is there
+	if ( is_plugin_active('ups-woocommerce-shipping-method/ups-woocommerce-shipping.php') ){
         deactivate_plugins( basename( __FILE__ ) );
-		wp_die(__("Is everything fine? You already have the Premium version installed in your website. For any issues, kindly raise a ticket via <a target='_blank' href='https://support.xadapter.com/'>support.xadapter.com</a>", "ups-woocommerce-shipping"), "", array('back_link' => 1 ));
+		wp_die( __("Oops! You tried installing the premium version without deactivating and deleting the basic version. Kindly deactivate and delete UPS(Basic) Woocommerce Extension and then try again", "ups-woocommerce-shipping" ), "", array('back_link' => 1 ));
 	}
 }
+register_activation_hook( __FILE__, 'wf_ups_pre_activation_check' );
 
-register_activation_hook( __FILE__, 'wf_ups_basic_pre_activation_check' );
 // Required functions
 if ( ! function_exists( 'wf_is_woocommerce_active' ) ) {
 	require_once( 'wf-includes/wf-functions.php' );
 }
-
 // WC active check
 if ( ! wf_is_woocommerce_active() ) {
 	return;
 }
 
-if( !defined('WF_UPS_ID') ){
+if (!defined('WF_UPS_ID')){
 	define("WF_UPS_ID", "wf_shipping_ups");
 }
 
-if( !defined('WF_UPS_ADV_DEBUG_MODE') ){
+if (!defined('WF_UPS_ADV_DEBUG_MODE')){
 	define("WF_UPS_ADV_DEBUG_MODE", "off"); // Turn 'on' for demo/test sites.
 }
-
 /**
  * WC_UPS class
  */
@@ -57,11 +54,30 @@ if(!class_exists('UPS_WooCommerce_Shipping')){
 			add_action( 'admin_enqueue_scripts', array( $this, 'wf_ups_scripts') );
 		}
 
-
-		public function init(){
+		public function init() {
+			include('includes/wf-automatic-label-generation.php');
+			
 			if ( ! class_exists( 'wf_order' ) ) {
-				include_once 'includes/class-wf-legacy.php';
-			}		
+		  		include_once 'includes/class-wf-legacy.php';
+		  	}
+			// Add Notice Class
+			include_once ( 'includes/class-wf-admin-notice.php' );
+			// WF Print Shipping Label.
+			include_once ( 'includes/class-wf-shipping-ups-admin.php' );
+			
+			include_once ( 'includes/class-wf-ups-accesspoint-locator.php' );
+			
+			if ( is_admin() ) {
+				//include api manager
+				include_once ( 'includes/wf_api_manager/wf-api-manager-config.php' );
+				
+				//include pickup functionality
+				include_once ( 'includes/class-wf-ups-pickup-admin.php' );
+				
+				include_once ( 'includes/class-wf-ups-admin-options.php' );
+			}
+			// Localisation
+			load_plugin_textdomain( 'ups-woocommerce-shipping', false, dirname( plugin_basename( __FILE__ ) ) . '/i18n/' );
 		}
 
 		/**
@@ -70,14 +86,12 @@ if(!class_exists('UPS_WooCommerce_Shipping')){
 		public function wf_plugin_action_links( $links ) {
 			$plugin_links = array(
 				'<a href="' . admin_url( 'admin.php?page=wc-settings&tab=shipping&section=wf_shipping_ups' ) . '">' . __( 'Settings', 'ups-woocommerce-shipping' ) . '</a>',
-
-				'<a href="https://www.xadapter.com/product/woocommerce-ups-shipping-plugin-with-print-label/" target="_blank">' . __( 'Premium Upgrade', 'ups-woocommerce-shipping' ) . '</a>',
-
-				'<a href="https://wordpress.org/support/plugin/ups-woocommerce-shipping-method" target="_blank">' . __( 'Support', 'ups-woocommerce-shipping' ) . '</a>',
+				'<a href="https://www.xadapter.com/category/product/woocommerce-ups-shipping-plugin-with-print-label/" target="_blank">' . __('Documentation', 'ups-woocommerce-shipping') . '</a>',
+	            '<a href="https://www.xadapter.com/online-support/" target="_blank">' . __('Support', 'ups-woocommerce-shipping') . '</a>'
 			);
 			return array_merge( $plugin_links, $links );
 		}
-
+		
 		/**
 		 * wc_ups_init function.
 		 *
@@ -108,15 +122,18 @@ if(!class_exists('UPS_WooCommerce_Shipping')){
 		 */
 		function wf_ups_scripts() {
 			wp_enqueue_script( 'jquery-ui-sortable' );
+			wp_enqueue_script( 'wf-common-script', plugins_url( '/resources/js/wf_common.js', __FILE__ ), array( 'jquery' ) );
+			wp_enqueue_script( 'wf-ups-script', plugins_url( '/resources/js/wf_ups.js', __FILE__ ), array( 'jquery' ) );
+			wp_enqueue_style( 'wf-common-style', plugins_url( '/resources/css/wf_common_style.css', __FILE__ ));
 		}
 	}
-	new UPS_WooCommerce_Shipping();
 }
+new UPS_WooCommerce_Shipping();
 
 /* Add a new country to countries list */
 if(!function_exists('wf_add_puert_rico_country')){
 	function wf_add_puert_rico_country( $country ) {
-	  $country["PR"] = 'Puert Rico';
+	  $country["PR"] = 'Puert Rico';  
 		return $country; 
 	}
 	add_filter( 'woocommerce_countries', 'wf_add_puert_rico_country', 10, 1 );
