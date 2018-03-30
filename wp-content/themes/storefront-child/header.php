@@ -29,8 +29,9 @@
 
 	<header id="masthead" class="site-header" role="banner" style="<?php storefront_header_styles(); ?>">
 		<div class="col-full">
-		<div id="branding-container">
+		<div id="branding-container" class="clearfix">
 			<a id="logo" href="/"><img src="/wp-content/uploads/2018/03/FSDlogo2.png" alt=""></a>
+			<a id="door-builder" href="https://www.framelessshowerdoors.com/get-started/" target="_blank">Design Your Shower Door</a>
 		</div>
 			
 			<?php

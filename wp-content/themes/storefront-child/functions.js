@@ -37,6 +37,17 @@ function positionSidebar() {
 			sidebar.style.top = 0;
 			sidebar.style.position = "fixed";
 		} 
+	} else {
+		sidebar.style.position = "static";
+	}
+}
+
+function resetSidebar() {
+	sidebar 	 = document.getElementById("secondary"),
+	screenWidth  = screen.width;
+
+	if(screenWidth > 767) {
+		sidebar.style.position = "static";
 	}
 }
 
@@ -48,6 +59,8 @@ function toggleSidebar() {
 window.addEventListener('scroll', stopScroll);
 
 window.addEventListener('scroll', positionSidebar);
+
+window.addEventListener('orientationchange', resetSidebar);
 
 
 
