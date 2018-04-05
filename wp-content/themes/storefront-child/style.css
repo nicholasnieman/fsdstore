@@ -176,11 +176,23 @@ mark.count {
 li.additional_information_tab {
     display: none !important;
 }
-ul.wc-tabs {
+/*ul.wc-tabs {
 	display: none;
-}
+}*/
 #content {
 	  flex: 1;
+}
+.woocommerce-Tabs-panel--wcpoa_product_tab .wcpoa_attachmentbtn {
+	background: #eeeeee;
+	color: #333333;
+	font-weight: 600;
+	transition: none;
+}
+.woocommerce-Tabs-panel--wcpoa_product_tab .wcpoa_attachmentbtn:hover {
+	background: #d5d5d5;
+}
+.woocommerce-Tabs-panel--wcpoa_product_tab .wcpoa_attachment_name {
+	color: #035d62;
 }
 
 /*******************************************************************
