@@ -288,11 +288,7 @@ div.woocommerce h2 {
 .contact:nth-child(3) {
 	margin-top: 20px;
 }
-#contact-container {
-	margin-top: 2em;
-}
 #contact-info {
-	margin: 0 auto;
 	width: 80%;
 	padding: 5%;
 	background: #f0f0f0;
@@ -303,9 +299,6 @@ div.woocommerce h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #0d5458;
-}
-#contact-heading-container {
-	text-align: center;
 }
 
 /*******************************************************************

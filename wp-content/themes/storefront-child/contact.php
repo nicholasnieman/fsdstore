@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' );
 ?>
 
-<h1 class="woocommerce-products-header__title page-title">Contact</h1>
+
 
 <?php
 /**
@@ -26,7 +26,7 @@ get_header( 'shop' );
  */
 do_action( 'woocommerce_before_main_content' );
 ?>
-
+<h1 class="woocommerce-products-header__title entry-title">Contact</h1>
 <div id="contact-container">
 	<div id="contact-info">
 		<div id="contact-heading-container">
