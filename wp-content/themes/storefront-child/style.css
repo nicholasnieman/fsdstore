@@ -176,9 +176,6 @@ mark.count {
 li.additional_information_tab {
     display: none !important;
 }
-/*ul.wc-tabs {
-	display: none;
-}*/
 #content {
 	  flex: 1;
 }
@@ -187,6 +184,9 @@ li.additional_information_tab {
 	color: #333333;
 	font-weight: 600;
 	transition: none;
+	float: none;
+	width: 101px;
+	display: block;
 }
 .woocommerce-Tabs-panel--wcpoa_product_tab .wcpoa_attachmentbtn:hover {
 	background: #d5d5d5;
