@@ -144,7 +144,7 @@ li.product:hover img {
 	transform: scale(1.1);
 	transition: all 150ms linear;
 }
-.product:hover h2{
+.product:hover h2 {
 	color: #035d62;
 	transition: all 150ms linear;
 }
@@ -324,7 +324,7 @@ div.woocommerce h2 {
 	#contact-info {
 		width: 100%;
 	}
-	.right-sidebar .content-area{
+	.right-sidebar .content-area {
 		float: none;
 	}
 	#branding-container {
@@ -397,6 +397,7 @@ div.woocommerce h2 {
 		background-color: rgba(0,0,0,.5);
 		width: 295px;
 		transition: all 250ms linear;
+		position: absolute;
 	}
 	span.gamma.widget-title {
 		display: block;
