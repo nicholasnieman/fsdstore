@@ -398,6 +398,7 @@ div.woocommerce h2 {
 		width: 295px;
 		transition: all 250ms linear;
 		position: absolute;
+		z-index: 99;
 	}
 	span.gamma.widget-title {
 		display: block;
