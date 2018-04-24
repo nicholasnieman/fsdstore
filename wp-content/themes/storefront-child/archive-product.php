@@ -27,6 +27,11 @@ if (is_shop()){
 } else if (is_product_category()) {
 ?>
 <h1 class='woocommerce-products-header__title page-title'><?php woocommerce_page_title() ?></h1>
+
+<?php 
+the_archive_description( '<div class="taxonomy-description">', '</div>' ); 
+?>
+
 <?php
 }
 
