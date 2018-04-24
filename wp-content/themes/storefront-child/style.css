@@ -194,7 +194,9 @@ li.additional_information_tab {
 .woocommerce-Tabs-panel--wcpoa_product_tab .wcpoa_attachment_name {
 	color: #035d62;
 }
-
+.category-description {
+	text-align: center;
+}
 /*******************************************************************
 ************************** Sidebar *********************************
 *******************************************************************/

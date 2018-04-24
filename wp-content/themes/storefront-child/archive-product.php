@@ -29,7 +29,7 @@ if (is_shop()){
 <h1 class='woocommerce-products-header__title page-title'><?php woocommerce_page_title() ?></h1>
 
 <?php 
-the_archive_description( '<div class="taxonomy-description">', '</div>' ); 
+the_archive_description( '<div class="taxonomy-description category-description">', '</div>' ); 
 ?>
 
 <?php
