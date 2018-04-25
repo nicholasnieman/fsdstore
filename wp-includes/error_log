@@ -1,0 +1,1 @@
+[17-Apr-2018 01:16:26 UTC] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/showerdirect/public_html/wp-includes/locale.php on line 10

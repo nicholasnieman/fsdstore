@@ -911,3 +911,529 @@ CLIENT -> SERVER: </html>
 CLIENT -> SERVER: 
 CLIENT -> SERVER: .
 CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<nnieman@fsdae.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Tue, 3 Apr 2018 20:10:02 +0000
+CLIENT -> SERVER: To: nnieman@fsdae.com
+CLIENT -> SERVER: From: "ShowerDoorsDirect.com" <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Reply-To: nick test <njn17845@gmail.com>
+CLIENT -> SERVER: Subject: [ShowerDoorsDirect.com] New customer order (11167) - April 3, 2018
+CLIENT -> SERVER: Message-ID: <d54cd5818cfd12a754bfd7912dd3f5c9@showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <!DOCTYPE html>
+CLIENT -> SERVER: <html lang="en-US">
+CLIENT -> SERVER: 	<head>
+CLIENT -> SERVER: 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+CLIENT -> SERVER: 		<title>ShowerDoorsDirect.com</title>
+CLIENT -> SERVER: 	</head>
+CLIENT -> SERVER: 	<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+CLIENT -> SERVER: 		<div id="wrapper" dir="ltr" style="background-color: #f7f7f7; margin: 0; padding: 70px 0 70px 0; -webkit-text-size-adjust: none !important; width: 100%;">
+CLIENT -> SERVER: 			<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+CLIENT -> SERVER: 				<tr>
+CLIENT -> SERVER: 					<td align="center" valign="top">
+CLIENT -> SERVER: 						<div id="template_header_image">
+CLIENT -> SERVER: 							<p style="margin-top: 0;"><img src="https://showerdoorsdirect.com/wp-content/uploads/2018/03/FSDlogo2.png" alt="ShowerDoorsDirect.com" style="border: none; display: inline; font-size: 14px; font-weight: bold; height: auto; line-height: 100%; outline: none; text-decoration: none; text-transform: capitalize;"></p>						</div>
+CLIENT -> SERVER: 						<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container" style="box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important; background-color: #ffffff; border: 1px solid #dedede; border-radius: 3px !important;">
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Header -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_header" style='background-color: #035d62; border-radius: 3px 3px 0 0 !important; color: #ffffff; border-bottom: 0; font-weight: bold; line-height: 100%; vertical-align: middle; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;'>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td id="header_wrapper" style="padding: 36px 48px; display: block;">
+CLIENT -> SERVER: 												<h1 style='color: #ffffff; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 30px; font-weight: 300; line-height: 150%; margin: 0; text-align: left; text-shadow: 0 1px 0 #357d81;'>New customer order</h1>
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Header -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Body -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_body">
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td valign="top" id="body_content" style="background-color: #ffffff;">
+CLIENT -> SERVER: 												<!-- Content -->
+CLIENT -> SERVER: 												<table border="0" cellpadding="20" cellspacing="0" width="100%">
+CLIENT -> SERVER: 													<tr>
+CLIENT -> SERVER: 														<td valign="top" style="padding: 48px 48px 0;">
+CLIENT -> SERVER: 															<div id="body_content_inner" style='color: #636363; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 150%; text-align: left;'>
+CLIENT -> SERVER: 
+CLIENT -> SERVER:  <p style="margin: 0 0 16px;">You have received an order from nick test. The order is as
+CLIENT -> SERVER: follows:</p>
+CLIENT -> SERVER: 
+CLIENT -> SERVER:  
+CLIENT -> SERVER: <h2 style='color: #035d62; display: block; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left;'>
+CLIENT -> SERVER: 	<a class="link" href="https://showerdoorsdirect.com/wp-admin/post.php?post=11167&amp;action=edit" style="color: #035d62; font-weight: normal; text-decoration: underline;">Order
+CLIENT -> SERVER: #11167</a> (April 3, 2018)</h2>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <div style="margin-bottom: 40px;">
+CLIENT -> SERVER: 	<table class="td" cellspacing="0" cellpadding="6" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; color: #636363; border: 1px solid #e5e5e5;" border="1">
+CLIENT -> SERVER: 		<thead>
+CLIENT -> SERVER: 			<tr>
+CLIENT -> SERVER: 				<th class="td" scope="col" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Product</th>
+CLIENT -> SERVER: 				<th class="td" scope="col" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Quantity</th>
+CLIENT -> SERVER: 				<th class="td" scope="col" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Price</th>
+CLIENT -> SERVER: 			</tr>
+CLIENT -> SERVER: 		</thead>
+CLIENT -> SERVER: 		<tbody>
+CLIENT -> SERVER: 					<tr class="order_item">
+CLIENT -> SERVER: 			<td class="td" style="text-align: left; vertical-align: middle; border: 1px solid #eee; word-wrap: break-word; color: #636363; padding: 12px;">test</td>
+CLIENT -> SERVER: 			<td class="td" style="text-align: left; vertical-align: middle; border: 1px solid #eee; color: #636363; padding: 12px;">1</td>
+CLIENT -> SERVER: 			<td class="td" style="text-align: left; vertical-align: middle; border: 1px solid #eee; color: #636363; padding: 12px;"><span class="woocommerce-Price-amount
+CLIENT -> SERVER: amount"><span class="woocommerce-Price-currencySymbol">$</span>0.01</span></td>
+CLIENT -> SERVER: 		</tr>
+CLIENT -> SERVER: 		
+CLIENT -> SERVER: 		</tbody>
+CLIENT -> SERVER: 		<tfoot>
+CLIENT -> SERVER: 								<tr>
+CLIENT -> SERVER: 						<th class="td" scope="row" colspan="2" style="text-align: left; border-top-width: 4px; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Subtotal:</th>
+CLIENT -> SERVER: 						<td class="td" style="text-align: left; border-top-width: 4px; color: #636363; border: 1px solid #e5e5e5; padding: 12px;"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>0.01</span></td>
+CLIENT -> SERVER: 					</tr>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 						<th class="td" scope="row" colspan="2" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Payment method:</th>
+CLIENT -> SERVER: 						<td class="td" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Credit Card</td>
+CLIENT -> SERVER: 					</tr>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 						<th class="td" scope="row" colspan="2" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Total:</th>
+CLIENT -> SERVER: 						<td class="td" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>0.01</span></td>
+CLIENT -> SERVER: 					</tr>
+CLIENT -> SERVER: 							</tfoot>
+CLIENT -> SERVER: 	</table>
+CLIENT -> SERVER: </div>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <table id="addresses" cellspacing="0" cellpadding="0" style="width: 100%; vertical-align: top; margin-bottom: 40px; padding: 0;" border="0">
+CLIENT -> SERVER: 	<tr>
+CLIENT -> SERVER: 		<td style="text-align: left; border: 0; padding: 0;" valign="top" width="50%">
+CLIENT -> SERVER: 			<h2 style='color: #035d62; display: block; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left;'>Billing address</h2>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: 			<address class="address" style="padding: 12px 12px 0; color: #636363; border: 1px solid #e5e5e5;">
+CLIENT -> SERVER: 				nick test<br>6546 test ave<br>davie, FL
+CLIENT -> SERVER: 33331									<br>6541851984													<p style="margin: 0 0 16px;">njn17845@gmail.com</p>
+CLIENT -> SERVER: 							</address>
+CLIENT -> SERVER: 		</td>
+CLIENT -> SERVER: 			</tr>
+CLIENT -> SERVER: </table>
+CLIENT -> SERVER: 															</div>
+CLIENT -> SERVER: 														</td>
+CLIENT -> SERVER: 													</tr>
+CLIENT -> SERVER: 												</table>
+CLIENT -> SERVER: 												<!-- End Content -->
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Body -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Footer -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="10" cellspacing="0" width="600" id="template_footer">
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td valign="top" style="padding: 0; -webkit-border-radius: 6px;">
+CLIENT -> SERVER: 												<table border="0" cellpadding="10" cellspacing="0" width="100%">
+CLIENT -> SERVER: 													<tr>
+CLIENT -> SERVER: 														<td colspan="2" valign="middle" id="credit" style="padding: 0 48px 48px 48px; -webkit-border-radius: 6px; border: 0; color: #689ea1; font-family: Arial; font-size: 12px; line-height: 125%; text-align: center;">
+CLIENT -> SERVER: 															<p><a href="https://www.framelessshowerdoors.com" target="_blank" style="color: #035d62; font-weight: normal; text-decoration: underline;">The Original Frameless Shower Doors</a></p>
+CLIENT -> SERVER: 														</td>
+CLIENT -> SERVER: 													</tr>
+CLIENT -> SERVER: 												</table>
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Footer -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 						</table>
+CLIENT -> SERVER: 					</td>
+CLIENT -> SERVER: 				</tr>
+CLIENT -> SERVER: 			</table>
+CLIENT -> SERVER: 		</div>
+CLIENT -> SERVER: 	</body>
+CLIENT -> SERVER: </html>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<njn17845@gmail.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Tue, 3 Apr 2018 20:10:02 +0000
+CLIENT -> SERVER: To: njn17845@gmail.com
+CLIENT -> SERVER: From: "ShowerDoorsDirect.com" <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Subject: Your ShowerDoorsDirect.com order receipt from April 3, 2018
+CLIENT -> SERVER: Message-ID: <26a3d4308a762b23d78e56678f730730@showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <!DOCTYPE html>
+CLIENT -> SERVER: <html lang="en-US">
+CLIENT -> SERVER: 	<head>
+CLIENT -> SERVER: 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+CLIENT -> SERVER: 		<title>ShowerDoorsDirect.com</title>
+CLIENT -> SERVER: 	</head>
+CLIENT -> SERVER: 	<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+CLIENT -> SERVER: 		<div id="wrapper" dir="ltr" style="background-color: #f7f7f7; margin: 0; padding: 70px 0 70px 0; -webkit-text-size-adjust: none !important; width: 100%;">
+CLIENT -> SERVER: 			<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+CLIENT -> SERVER: 				<tr>
+CLIENT -> SERVER: 					<td align="center" valign="top">
+CLIENT -> SERVER: 						<div id="template_header_image">
+CLIENT -> SERVER: 							<p style="margin-top: 0;"><img src="https://showerdoorsdirect.com/wp-content/uploads/2018/03/FSDlogo2.png" alt="ShowerDoorsDirect.com" style="border: none; display: inline; font-size: 14px; font-weight: bold; height: auto; line-height: 100%; outline: none; text-decoration: none; text-transform: capitalize;"></p>						</div>
+CLIENT -> SERVER: 						<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container" style="box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important; background-color: #ffffff; border: 1px solid #dedede; border-radius: 3px !important;">
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Header -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_header" style='background-color: #035d62; border-radius: 3px 3px 0 0 !important; color: #ffffff; border-bottom: 0; font-weight: bold; line-height: 100%; vertical-align: middle; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;'>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td id="header_wrapper" style="padding: 36px 48px; display: block;">
+CLIENT -> SERVER: 												<h1 style='color: #ffffff; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 30px; font-weight: 300; line-height: 150%; margin: 0; text-align: left; text-shadow: 0 1px 0 #357d81;'>Thank you for your order</h1>
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Header -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Body -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_body">
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td valign="top" id="body_content" style="background-color: #ffffff;">
+CLIENT -> SERVER: 												<!-- Content -->
+CLIENT -> SERVER: 												<table border="0" cellpadding="20" cellspacing="0" width="100%">
+CLIENT -> SERVER: 													<tr>
+CLIENT -> SERVER: 														<td valign="top" style="padding: 48px 48px 0;">
+CLIENT -> SERVER: 															<div id="body_content_inner" style='color: #636363; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 150%; text-align: left;'>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <p style="margin: 0 0 16px;">Your order has been received and is now being processed. Your order
+CLIENT -> SERVER: details are shown below for your reference:</p>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <h2 style='color: #035d62; display: block; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left;'>
+CLIENT -> SERVER: 	Order #11167 (April 3, 2018)</h2>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <div style="margin-bottom: 40px;">
+CLIENT -> SERVER: 	<table class="td" cellspacing="0" cellpadding="6" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif; color: #636363; border: 1px solid #e5e5e5;" border="1">
+CLIENT -> SERVER: 		<thead>
+CLIENT -> SERVER: 			<tr>
+CLIENT -> SERVER: 				<th class="td" scope="col" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Product</th>
+CLIENT -> SERVER: 				<th class="td" scope="col" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Quantity</th>
+CLIENT -> SERVER: 				<th class="td" scope="col" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Price</th>
+CLIENT -> SERVER: 			</tr>
+CLIENT -> SERVER: 		</thead>
+CLIENT -> SERVER: 		<tbody>
+CLIENT -> SERVER: 					<tr class="order_item">
+CLIENT -> SERVER: 			<td class="td" style="text-align: left; vertical-align: middle; border: 1px solid #eee; word-wrap: break-word; color: #636363; padding: 12px;">test</td>
+CLIENT -> SERVER: 			<td class="td" style="text-align: left; vertical-align: middle; border: 1px solid #eee; color: #636363; padding: 12px;">1</td>
+CLIENT -> SERVER: 			<td class="td" style="text-align: left; vertical-align: middle; border: 1px solid #eee; color: #636363; padding: 12px;"><span class="woocommerce-Price-amount
+CLIENT -> SERVER: amount"><span class="woocommerce-Price-currencySymbol">$</span>0.01</span></td>
+CLIENT -> SERVER: 		</tr>
+CLIENT -> SERVER: 		
+CLIENT -> SERVER: 		</tbody>
+CLIENT -> SERVER: 		<tfoot>
+CLIENT -> SERVER: 								<tr>
+CLIENT -> SERVER: 						<th class="td" scope="row" colspan="2" style="text-align: left; border-top-width: 4px; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Subtotal:</th>
+CLIENT -> SERVER: 						<td class="td" style="text-align: left; border-top-width: 4px; color: #636363; border: 1px solid #e5e5e5; padding: 12px;"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>0.01</span></td>
+CLIENT -> SERVER: 					</tr>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 						<th class="td" scope="row" colspan="2" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Payment method:</th>
+CLIENT -> SERVER: 						<td class="td" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Credit Card</td>
+CLIENT -> SERVER: 					</tr>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 						<th class="td" scope="row" colspan="2" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;">Total:</th>
+CLIENT -> SERVER: 						<td class="td" style="text-align: left; color: #636363; border: 1px solid #e5e5e5; padding: 12px;"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>0.01</span></td>
+CLIENT -> SERVER: 					</tr>
+CLIENT -> SERVER: 							</tfoot>
+CLIENT -> SERVER: 	</table>
+CLIENT -> SERVER: </div>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <table id="addresses" cellspacing="0" cellpadding="0" style="width: 100%; vertical-align: top; margin-bottom: 40px; padding: 0;" border="0">
+CLIENT -> SERVER: 	<tr>
+CLIENT -> SERVER: 		<td style="text-align: left; border: 0; padding: 0;" valign="top" width="50%">
+CLIENT -> SERVER: 			<h2 style='color: #035d62; display: block; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 130%; margin: 0 0 18px; text-align: left;'>Billing address</h2>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: 			<address class="address" style="padding: 12px 12px 0; color: #636363; border: 1px solid #e5e5e5;">
+CLIENT -> SERVER: 				nick test<br>6546 test ave<br>davie, FL
+CLIENT -> SERVER: 33331									<br>6541851984													<p style="margin: 0 0 16px;">njn17845@gmail.com</p>
+CLIENT -> SERVER: 							</address>
+CLIENT -> SERVER: 		</td>
+CLIENT -> SERVER: 			</tr>
+CLIENT -> SERVER: </table>
+CLIENT -> SERVER: 															</div>
+CLIENT -> SERVER: 														</td>
+CLIENT -> SERVER: 													</tr>
+CLIENT -> SERVER: 												</table>
+CLIENT -> SERVER: 												<!-- End Content -->
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Body -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Footer -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="10" cellspacing="0" width="600" id="template_footer">
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td valign="top" style="padding: 0; -webkit-border-radius: 6px;">
+CLIENT -> SERVER: 												<table border="0" cellpadding="10" cellspacing="0" width="100%">
+CLIENT -> SERVER: 													<tr>
+CLIENT -> SERVER: 														<td colspan="2" valign="middle" id="credit" style="padding: 0 48px 48px 48px; -webkit-border-radius: 6px; border: 0; color: #689ea1; font-family: Arial; font-size: 12px; line-height: 125%; text-align: center;">
+CLIENT -> SERVER: 															<p><a href="https://www.framelessshowerdoors.com" target="_blank" style="color: #035d62; font-weight: normal; text-decoration: underline;">The Original Frameless Shower Doors</a></p>
+CLIENT -> SERVER: 														</td>
+CLIENT -> SERVER: 													</tr>
+CLIENT -> SERVER: 												</table>
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Footer -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 						</table>
+CLIENT -> SERVER: 					</td>
+CLIENT -> SERVER: 				</tr>
+CLIENT -> SERVER: 			</table>
+CLIENT -> SERVER: 		</div>
+CLIENT -> SERVER: 	</body>
+CLIENT -> SERVER: </html>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<nnieman@fsdae.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Thu, 12 Apr 2018 17:36:48 +0000
+CLIENT -> SERVER: To: nnieman@fsdae.com
+CLIENT -> SERVER: From: WordPress <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Subject: [ShowerDoorsDirect.com] New User Registration
+CLIENT -> SERVER: Message-ID: <9e9784ac2d22d7ac45ff906719d976de@showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: New user registration on your site ShowerDoorsDirect.com:
+CLIENT -> SERVER: 
+CLIENT -> SERVER: Username: jmollejas@fsdae.com
+CLIENT -> SERVER: 
+CLIENT -> SERVER: Email: jmollejas@fsdae.com
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<jmollejas@fsdae.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Thu, 12 Apr 2018 17:36:48 +0000
+CLIENT -> SERVER: To: jmollejas@fsdae.com
+CLIENT -> SERVER: From: WordPress <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Subject: [ShowerDoorsDirect.com] Your username and password info
+CLIENT -> SERVER: Message-ID: <7bbafc7e342e8b8f63504c98d6fbccd1@showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: Username: jmollejas@fsdae.com
+CLIENT -> SERVER: 
+CLIENT -> SERVER: To set your password, visit the following address:
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <https://showerdoorsdirect.com/wp-login.php?action=rp&key=Vt118TFF3fXmxge7w06t&login=jmollejas%40fsdae.com>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: https://showerdoorsdirect.com/wp-login.php
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO www.showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO www.showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<aborden@fsdae.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Mon, 16 Apr 2018 15:26:50 +0000
+CLIENT -> SERVER: To: aborden@fsdae.com
+CLIENT -> SERVER: From: "ShowerDoorsDirect.com" <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Subject: Password reset for ShowerDoorsDirect.com
+CLIENT -> SERVER: Message-ID: <2a3aaa75c01bbd6ae8d481c6cccd4ea2@www.showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <!DOCTYPE html>
+CLIENT -> SERVER: <html>
+CLIENT -> SERVER: <head>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: 	
+CLIENT -> SERVER: 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+CLIENT -> SERVER: 		<title>ShowerDoorsDirect.com</title>
+CLIENT -> SERVER: 	
+CLIENT -> SERVER: 	</head>
+CLIENT -> SERVER: <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+CLIENT -> SERVER: 		<div id="wrapper" dir="ltr" style="background-color: #f7f7f7; margin: 0; padding: 70px 0 70px 0; -webkit-text-size-adjust: none !important; width: 100%;">
+CLIENT -> SERVER: 			<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+CLIENT -> SERVER: 				<tr>
+CLIENT -> SERVER: 					<td align="center" valign="top">
+CLIENT -> SERVER: 						<div id="template_header_image">
+CLIENT -> SERVER: 							<p style="margin-top: 0;"><img src="https://showerdoorsdirect.com/wp-content/uploads/2018/03/FSDlogo2.png" alt="ShowerDoorsDirect.com" style="border: none; display: inline; font-size: 14px; font-weight: bold; height: auto; line-height: 100%; outline: none; text-decoration: none; text-transform: capitalize;"></p>						</div>
+CLIENT -> SERVER: 						<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container" style="box-shadow: 0 1px 4px rgba(0,0,0,0.1) !important; background-color: #ffffff; border: 1px solid #dedede; border-radius: 3px !important;">
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Header -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_header" style='background-color: #035d62; border-radius: 3px 3px 0 0 !important; color: #ffffff; border-bottom: 0; font-weight: bold; line-height: 100%; vertical-align: middle; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;'>
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td id="header_wrapper" style="padding: 36px 48px; display: block;">
+CLIENT -> SERVER: 												<h1 style='color: #ffffff; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 30px; font-weight: 300; line-height: 150%; margin: 0; text-align: left; text-shadow: 0 1px 0 #357d81;'>Password reset instructions</h1>
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Header -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Body -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_body">
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td valign="top" id="body_content" style="background-color: #ffffff;">
+CLIENT -> SERVER: 												<!-- Content -->
+CLIENT -> SERVER: 												<table border="0" cellpadding="20" cellspacing="0" width="100%">
+CLIENT -> SERVER: 													<tr>
+CLIENT -> SERVER: 														<td valign="top" style="padding: 48px 48px 0;">
+CLIENT -> SERVER: 															<div id="body_content_inner" style='color: #636363; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 14px; line-height: 150%; text-align: left;'>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: <p style="margin: 0 0 16px;">Someone requested that the password be reset for the following
+CLIENT -> SERVER: account:</p>
+CLIENT -> SERVER: <p style="margin: 0 0 16px;">Username: Angela</p>
+CLIENT -> SERVER: <p style="margin: 0 0 16px;">If this was a mistake, just ignore this email and nothing will
+CLIENT -> SERVER: happen.</p>
+CLIENT -> SERVER: <p style="margin: 0 0 16px;">To reset your password, visit the following address:</p>
+CLIENT -> SERVER: <p style="margin: 0 0 16px;">
+CLIENT -> SERVER: 	<a class="link" href="http://www.showerdoorsdirect.com/my-account/lost-password/?key=7CPuu8ClGln6foWazzoc&amp;login=Angela" style="color: #035d62; font-weight: normal; text-decoration: underline;">
+CLIENT -> SERVER: 			Click here to reset your password</a>
+CLIENT -> SERVER: </p>
+CLIENT -> SERVER: <p style="margin: 0 0 16px;"></p>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: 															</div>
+CLIENT -> SERVER: 														</td>
+CLIENT -> SERVER: 													</tr>
+CLIENT -> SERVER: 												</table>
+CLIENT -> SERVER: 												<!-- End Content -->
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Body -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 							<tr>
+CLIENT -> SERVER: 								<td align="center" valign="top">
+CLIENT -> SERVER: 									<!-- Footer -->
+CLIENT -> SERVER: 									<table border="0" cellpadding="10" cellspacing="0" width="600" id="template_footer">
+CLIENT -> SERVER: 										<tr>
+CLIENT -> SERVER: 											<td valign="top" style="padding: 0; -webkit-border-radius: 6px;">
+CLIENT -> SERVER: 												<table border="0" cellpadding="10" cellspacing="0" width="100%">
+CLIENT -> SERVER: 													<tr>
+CLIENT -> SERVER: 														<td colspan="2" valign="middle" id="credit" style="padding: 0 48px 48px 48px; -webkit-border-radius: 6px; border: 0; color: #689ea1; font-family: Arial; font-size: 12px; line-height: 125%; text-align: center;">
+CLIENT -> SERVER: 															<p><a href="https://www.framelessshowerdoors.com" target="_blank" style="color: #035d62; font-weight: normal; text-decoration: underline;">The Original Frameless Shower Doors</a></p>
+CLIENT -> SERVER: 														</td>
+CLIENT -> SERVER: 													</tr>
+CLIENT -> SERVER: 												</table>
+CLIENT -> SERVER: 											</td>
+CLIENT -> SERVER: 										</tr>
+CLIENT -> SERVER: 									</table>
+CLIENT -> SERVER: 									<!-- End Footer -->
+CLIENT -> SERVER: 								</td>
+CLIENT -> SERVER: 							</tr>
+CLIENT -> SERVER: 						</table>
+CLIENT -> SERVER: 					</td>
+CLIENT -> SERVER: 				</tr>
+CLIENT -> SERVER: 			</table>
+CLIENT -> SERVER: 		</div>
+CLIENT -> SERVER: 	
+CLIENT -> SERVER: </body>
+CLIENT -> SERVER: </html>
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO www.showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO www.showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<nnieman@fsdae.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Mon, 16 Apr 2018 15:28:08 +0000
+CLIENT -> SERVER: To: nnieman@fsdae.com
+CLIENT -> SERVER: From: WordPress <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Subject: [ShowerDoorsDirect.com] Password Changed
+CLIENT -> SERVER: Message-ID: <345a2bf548a749c09ed10b89c4857cfb@www.showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: Password changed for user: Angela
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT
+CLIENT -> SERVER: EHLO www.showerdoorsdirect.com
+CLIENT -> SERVER: STARTTLS
+CLIENT -> SERVER: EHLO www.showerdoorsdirect.com
+CLIENT -> SERVER: AUTH LOGIN
+CLIENT -> SERVER: ZG9ub3RyZXBseUBzaG93ZXJkb29yc2RpcmVjdC5jb20=
+CLIENT -> SERVER: TG9uNjc5MzQ=
+CLIENT -> SERVER: MAIL FROM:<donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: RCPT TO:<jmollejas@fsdae.com>
+CLIENT -> SERVER: DATA
+CLIENT -> SERVER: Date: Tue, 17 Apr 2018 19:38:16 +0000
+CLIENT -> SERVER: To: jmollejas@fsdae.com
+CLIENT -> SERVER: From: WordPress <donotreply@showerdoorsdirect.com>
+CLIENT -> SERVER: Subject: [ShowerDoorsDirect.com] Notice of Password Change
+CLIENT -> SERVER: Message-ID: <44ee507d669cca99a2f5c1711d1d724b@www.showerdoorsdirect.com>
+CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+CLIENT -> SERVER: MIME-Version: 1.0
+CLIENT -> SERVER: Content-Type: text/plain; charset=UTF-8
+CLIENT -> SERVER: 
+CLIENT -> SERVER: Hi jmollejas@fsdae.com,
+CLIENT -> SERVER: 
+CLIENT -> SERVER: This notice confirms that your password was changed on ShowerDoorsDirect.com.
+CLIENT -> SERVER: 
+CLIENT -> SERVER: If you did not change your password, please contact the Site Administrator at
+CLIENT -> SERVER: nnieman@fsdae.com
+CLIENT -> SERVER: 
+CLIENT -> SERVER: This email has been sent to jmollejas@fsdae.com
+CLIENT -> SERVER: 
+CLIENT -> SERVER: Regards,
+CLIENT -> SERVER: All at ShowerDoorsDirect.com
+CLIENT -> SERVER: http://www.showerdoorsdirect.com
+CLIENT -> SERVER: 
+CLIENT -> SERVER: .
+CLIENT -> SERVER: QUIT

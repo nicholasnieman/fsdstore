@@ -1,0 +1,7 @@
+[10-Apr-2018 17:28:17 UTC] PHP Fatal error:  Call to undefined function the_ID() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/content-link.php on line 13
+[11-Apr-2018 09:14:04 UTC] PHP Fatal error:  Call to undefined function the_ID() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/content.php on line 13
+[11-Apr-2018 10:27:22 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/index.php on line 17
+[11-Apr-2018 19:17:45 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/404.php on line 10
+[12-Apr-2018 04:18:35 UTC] PHP Fatal error:  Call to undefined function _e() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/author-bio.php on line 12
+[12-Apr-2018 05:40:51 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/archive.php on line 19
+[19-Apr-2018 02:51:20 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/showerdirect/public_html/wp-content/themes/twentyfifteen/404.php on line 10
