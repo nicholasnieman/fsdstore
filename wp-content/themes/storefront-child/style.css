@@ -130,6 +130,10 @@ ul.menu li a:hover span.count {
 .product_title {
 	font-weight: bold;
 }
+ul.products,
+li.product img {
+	max-height: 270px;
+}
 .woocommerce-message,
 .woocommerce-info {
 	background-color: #035d62;
