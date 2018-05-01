@@ -132,6 +132,10 @@ ul.menu li a:hover span.count {
 }
 li.product img {
 	max-height: 270px;
+	min-height: 125px;
+}
+.woocommerce-loop-product__title {
+	min-height: 60px;
 }
 .woocommerce-message,
 .woocommerce-info {
