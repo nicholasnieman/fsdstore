@@ -44,6 +44,17 @@ the_archive_description( '<div class="taxonomy-description category-description"
  */
 do_action( 'woocommerce_before_main_content' );
 
+if (is_shop()){
+	echo '<div id="homepage-description">
+			<div id="homepage-description-heading">
+				Shop and save on shower door hardware and accessories at The Original Frameless Shower Doors®.
+			</div>
+			<div id="homepage-description-body">
+				Our store offers an exclusive range of pull handles, knobs, hinges, towel bars, clamps, sweeps, seals, and shelving. Browse our store for the latest products and check us out often as we are constantly striving to add new merchandise for a state-of-the-art product selection.
+			</div>
+		 </div>';
+}
+
 if ( have_posts() ) {
 
 	/**

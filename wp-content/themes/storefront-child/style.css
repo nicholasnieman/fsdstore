@@ -208,7 +208,17 @@ li.additional_information_tab {
 .woocommerce-result-count {
 	display: none;
 }
-
+#homepage-description {
+	text-align: center;
+}
+#homepage-description-heading {
+	color: #035d62;
+	font-weight: bold;
+	margin-bottom: .5em;
+}
+#homepage-description-body {
+	color: #000;
+}
 /*******************************************************************
 ************************** Sidebar *********************************
 *******************************************************************/
