@@ -45,10 +45,10 @@ add_filter( 'get_terms', 'exclude_category', 10, 3 );
 function exclude_category( $terms, $taxonomies, $args ) {
   $new_terms = array();
   // if a product category and on a page
-  if ( in_array( 'product_cat', $taxonomies ) && ! is_admin() && is_page() ) {
+  if ( in_array( 'product_cat', $taxonomies ) ) {
     foreach ( $terms as $key => $term ) {
   // Enter the name of the category you want to exclude in array
-      if ( ! in_array( $term->slug, array( 'seals', 'threshold', 'door-sweeps' ) ) ) {
+      if ( ! in_array( $term->slug, array( 'seals', 'threshold', 'door-sweeps', 'u-channel' ) ) ) {
         $new_terms[] = $term;
       }
     }
