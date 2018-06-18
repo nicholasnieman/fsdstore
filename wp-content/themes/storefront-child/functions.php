@@ -41,6 +41,23 @@ add_action('init', 'remove_header_content');
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 
 
+add_filter( 'get_terms', 'exclude_category', 10, 3 );
+function exclude_category( $terms, $taxonomies, $args ) {
+  $new_terms = array();
+  // if a product category and on a page
+  if ( in_array( 'product_cat', $taxonomies ) && ! is_admin() && is_page() ) {
+    foreach ( $terms as $key => $term ) {
+  // Enter the name of the category you want to exclude in array
+      if ( ! in_array( $term->slug, array( 'seals', 'threshold', 'door-sweeps' ) ) ) {
+        $new_terms[] = $term;
+      }
+    }
+    $terms = $new_terms;
+  }
+  return $terms;
+}
+
+
 
 
  
